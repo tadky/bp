@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+
+\bibitem{restThesis}
+{\sc Fielding, R.~T.}
+\newblock {\em Architectural Styles and the Design of Network-based Software
+  Architectures}.
+\newblock PhD thesis, PhD Dissertation, University of California, Irvine, 2000.
+\newblock Online, Přístup 17.11.2018.
+
+\bibitem{rest}
+{\sc Hesam, Masne, S., Harry, and Rajan}.
+\newblock {REST API} {T}utorial.
+\newblock \url{https://restfulapi.net/}.
+\newblock Online, Přístup 17.11.2018.
+
+\bibitem{latex}
+{\sc Satrapa, P.}
+\newblock {\em LaTeX pro pragmatiky}.
+\newblock 2011.
+
+\end{thebibliography}

@@ -1,0 +1,101 @@
+\documentclass{ctuthesis}
+\usepackage{float}
+\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\newcommand{\tabitem}{~~\llap{\,\begin{picture}(-1,1)(-1,-3)\circle*{3}\end{picture}\ }~~}
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+
+
+\ctusetup{
+	doctype-czech = {Bakalářská práce},
+	xfaculty = F3,
+	mainlanguage = czech,
+	titlelanguage = czech,
+	title-english = {Create REST service for conversion from LaTeX to PDF},
+	title-czech = {Vytvoření REST služby pro konverzi LaTeX souborů do PDF},
+	department-czech = {Katedra počítačů},
+	author = {TADEÁŠ KYRAL},
+	supervisor = {Ing. LUKÁŠ ZOUBEK},
+	supervisor-address = {Katedra ekonomiky, manažerství a humanitních věd},
+	fieldofstudy-czech = {Softwarové inženýrství a technologie},
+	subfieldofstudy-czech = {žádné},
+	keywords-czech = {PDF, LaTeX, PDF, Moodle, CourseWare, Web service, REST, Java EE},
+	keywords-english = {PDF, LaTeX, PDF, Moodle, CourseWare, Web service, REST, Java EE},
+	%front-specification = true,
+	%specification-file = {}, % PDF s tvym zadanim prace
+	day = 2,
+	month = 11,
+	year = 2018,
+}
+
+\ctuprocess
+
+\addto\ctucaptionsczech{%
+	\def\supervisorname{Vedoucí}%
+}
+
+% Podekovani
+\begin{thanks}
+	V první řadě bych chtěl poděkovat svému vedoucímu JMENO za příjemnou spolupráci a cenné rady při naších konzultacích. Dále bych chtěl poděkovat mé rodině a kamarádům, kteří mě
+	při psaní této práce podporovali.
+\end{thanks}
+
+% Prohlaseni
+\begin{declaration}
+	Prohlašuji, že jsem předloženou práci vypracoval samostatně, a že jsem uvedl veškerou použitou literaturu.
+	
+	V Praze, \ctufield{day}.~\monthinlanguage{title}~\ctufield{year}
+\end{declaration}
+
+
+% Abstrakt v anglictine
+\begin{abstract-english}
+	Text follows...
+\end{abstract-english}
+
+
+% Abstrakt v cestine
+\begin{abstract-czech}
+	Práce pojednává o návrhu a vývoji webové služby pro konverzi LaTeXu do PDF, pro uživatele v Moodle a CourseWare. Doplněk má uživatelům usnadnit práci s LaTeXovými soubory přímo skrze portál Moodle, bez potřeby stahování a kompilace na svém stroji. Byla naimplementována služba na server a následně byla zapojena do provozu. Uživatelům portálů se usnadnila práce s LaTeX soubory. 
+\end{abstract-czech}
+
+
+\begin{document}
+	\maketitle
+
+	\input{introduction}
+
+	\input{theory}
+ 
+	\input{analysis}
+	  
+  	\input{design}  
+
+	\begin{center}
+		\textit{R = (A $\lor$ B $\lor$ C $\lor$ D)}
+	\end{center}
+ 
+ 	\begin{figure}[H]
+ 		\includegraphics[width=0.9\textwidth]{process_app}
+ 		\caption{Vizualizace průchodu aplikací}
+	 \end{figure}
+	
+	\chapter{Implementace}
+
+	\chapter{Závěr}
+	Text follows
+	
+	\bibliographystyle{acm}
+	\bibliography{ctubib}
+	
+	\input{zdroje}
+	
+	\input{zkratky}
+	
+	\input{prilohy}
+	
+\end{document}

@@ -1,0 +1,81 @@
+ \chapter{Analýza}
+ 
+ 
+ \section{Požadavky}
+ Nyní představíme požadavky kladené na aplikaci. Ty jsou buď požadované zadávajícím nebo odvozené z potřeb, ke kterým bude služba používána.Ale i z omezení plynoucích z prostředí v jakém bude provozována, v tomto případě pro fakultu státní vysoké školy, jmenovitě Fakulta elektrotechnická, ČVUT. \\
+ Za pomoci metody FURPS+ rozdělíme požadavky a omezení na funkční a nefunkční. 
+ 
+ \subsection{Funkční požadavky}
+ \begin{table}[H]
+ 	\begin{center}
+ 		\begin{tabular}{ p{4cm} P{0,7cm} P{7,9cm} }
+ 			\textbf{Typ} & \multicolumn{2}{l}{\textbf{Požadavky}} \\
+ 			\midrule[0,15em]
+ 			Funkčnost 
+ 			&\multicolumn{2}{l}{\tabitem Webová služba s REST rozhraním pro komunikaci} \\
+ 			&\multicolumn{2}{l}{\tabitem Umět přijmout požadavky a soubory}\\
+ 			&\multicolumn{2}{P{7,6cm}}{\tabitem Zkompilování LaTeX souborů s požadovaným nastavením do PDF}\\
+ 			&\multicolumn{2}{l}{\tabitem Uložení PDF a jeho poskytnutí}\\	
+ 			&\multicolumn{2}{l}{\tabitem Uživatel může zvolit tyto nastavení:}\\
+ 			&&\tabitem Přidat vodoznak na kařdou stranu PDF\\
+ 			&&\tabitem Nakonec souboru přidat stránku s předem stanoveným obsahem\\
+ 			&&\tabitem Výsledný soubor PDF bude chráněný\\
+ 			&&\tabitem Výsledný soubor PDF nebude kopírovatelný nebo tisknutelný\\
+ 		\end{tabular}
+ 	\end{center}
+ 	\caption{Funkční požadavky}
+ 	\label{tab:errors}
+ \end{table} 
+ Služba ma jasný účel a z toho i plyne menší množství funkcionalit.  
+ 
+ \subsection{Nefunkční požadavky}
+ 
+ \begin{table}[H]
+ 	\begin{center}
+ 		\begin{tabular}{ p{4cm} P{8,6cm} }
+ 			\textbf{Typ} & \textbf{Požadavky} \\
+ 			\midrule[0,15em]
+ 			Použitelnost & \tabitem Dokumentace k rozhraní na swagger.com\\
+ 						& \tabitem Přístup skrz REST api, pouze s tokenem\\
+ 			\midrule		
+ 			Spolehlivost & \tabitem Služba není kritická\\
+ 										& \tabitem Autorizace pomocí OAuth\\
+ 			\midrule
+ 			Výkon & \tabitem Zvládnutí obsloužení desítky požadavků najednou\\
+ 						& \tabitem Ukládání výsledných dokumentů po dobu jednoho měsíce\\
+ 						& \tabitem Maximální doba tvorby dokumentu 5 minut\\	
+			\midrule
+			Podporovatelnost & \tabitem Dokumentace k rozhraní na swagger.com\\
+							& \tabitem Služba může být rozšířena o kompilování samotného TeXu a může podporovat vytváření i jiných formátů z LaTeXu\\	
+			\midrule
+			Implementace & \tabitem Platforma - Java EE\\
+						& \tabitem Komunikace - REST Api\\
+			\midrule
+ 			Rozhraní & \tabitem Komunikuje s Moodle a CourseWare, tyto portály posílají data\\
+ 			\midrule
+ 			Fyzické & \tabitem Musí být provozováno na serverech ČVUT
+ 	\end{tabular}
+ 	\end{center}
+ 	\caption{Funkční a nefunkční požadavky}
+ 	\label{tab:errors}
+ \end{table}
+ 
+ Z tabulky je vidět, že služba není nijak kritická a působí jenom jako doplněk do výše zmíněných portálů. Musí ovšem splňovat vyšší bezpečnostní nároky zapříčiněné prostředím v jakém se bude používat. 
+
+\section{Existující řešení}
+Na základě stanovených požadavků v minulé kapitole přejdeme k analýze již existujících řešení. Mometálně uživatelé Moodle mohou vkládat do svých souborů řádkové příkazy, což není úplně dostačující a nesplňuje to požadavky. Samozřejmě se dají používat pro vytváření PDF z LaTeX souborů kompilátory, které si můžete stáhnout a používat lokálně. To ovšem není předmětem této práce, a proto se podíváme na webové služby, které více odpovídají potřebám. Pár vybraných si představíme.  
+
+\subsection{OverLeaf}
+Placená služba pro tvorbu LaTeX dokumentů, která umožňuje i používání s omezeními zadarmo. Je velmi oblíbená hlavně kvůli hezkému prostředí pro tvorbu dokumentů a jejich správu. Také nabízí výhody pro určité zájmové skupiny, nejzajimavější vzhledem k tématu této práce je předplatitelská služba OverLeaf Commons https://www.overleaf.com/for/universities. Ta poskytuje sdílené prostředí se všemi výhodami pro zaměstnance a studenty univerzity.
+
+\subsection{BlueLaTeX}
+Open source služba pro kompilaci LateX souborů. Kompilovat můžete na jejich serveru nebo nabízejí kód pro běh na vlastním serveru. Kromě samotné serverové implementace je k dispozici i webový klient. Vše je pouze zatím v Beta verzi a samotní tvůrci varují před možnými nedostatky a problémy. Hlavním lákadlem je real time spolupráce více lidí na jednom dokumentu a také možnost provozovat server lokálně. 
+
+\subsection{ScienceSoft}
+http://sciencesoft.at/latex/index?lang=en 
+
+\subsection{CoCalc}
+
+
+\section{Kompilátory}
+
