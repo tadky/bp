@@ -35,11 +35,15 @@
 \contentsline {subsection}{\numberline {3.2.1}OverLeaf}{7}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}BlueLaTeX}{8}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}ScienceSoft}{8}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}CoCalc}{8}{subsection.3.2.4}
-\contentsline {chapter}{\numberline {4}N\IeC {\'a}vrh}{9}{chapter.4}
-\contentsline {chapter}{\numberline {5}Implementace}{10}{chapter.5}
-\contentsline {chapter}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{11}{chapter.6}
-\contentsline {chapter}{Literatura}{12}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Seznam zdroj\IeC {\r u}}{13}{appendix.A}
-\contentsline {chapter}{\numberline {B}Seznam zkratek}{14}{appendix.B}
-\contentsline {chapter}{\numberline {C}Testov\IeC {\'a}n\IeC {\'\i }}{15}{appendix.C}
+\contentsline {subsection}{\numberline {3.2.4}ShareLaTeX}{8}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Porovn\IeC {\'a}n\IeC {\'\i }}{8}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Kompil\IeC {\'a}tory}{8}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}TeXLive}{9}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {4}N\IeC {\'a}vrh}{10}{chapter.4}
+\contentsline {section}{\numberline {4.1}}{10}{section.4.1}
+\contentsline {chapter}{\numberline {5}Implementace}{11}{chapter.5}
+\contentsline {chapter}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{12}{chapter.6}
+\contentsline {chapter}{Literatura}{13}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Seznam zdroj\IeC {\r u}}{14}{appendix.A}
+\contentsline {chapter}{\numberline {B}Seznam zkratek}{15}{appendix.B}
+\contentsline {chapter}{\numberline {C}Testov\IeC {\'a}n\IeC {\'\i }}{16}{appendix.C}

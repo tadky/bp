@@ -66,16 +66,27 @@
 Na základě stanovených požadavků v minulé kapitole přejdeme k analýze již existujících řešení. Mometálně uživatelé Moodle mohou vkládat do svých souborů řádkové příkazy, což není úplně dostačující a nesplňuje to požadavky. Samozřejmě se dají používat pro vytváření PDF z LaTeX souborů kompilátory, které si můžete stáhnout a používat lokálně. To ovšem není předmětem této práce, a proto se podíváme na webové služby, které více odpovídají potřebám. Pár vybraných si představíme.  
 
 \subsection{OverLeaf}
+https://www.overleaf.com/for/universities
 Placená služba pro tvorbu LaTeX dokumentů, která umožňuje i používání s omezeními zadarmo. Je velmi oblíbená hlavně kvůli hezkému prostředí pro tvorbu dokumentů a jejich správu. Také nabízí výhody pro určité zájmové skupiny, nejzajimavější vzhledem k tématu této práce je předplatitelská služba OverLeaf Commons https://www.overleaf.com/for/universities. Ta poskytuje sdílené prostředí se všemi výhodami pro zaměstnance a studenty univerzity.
 
 \subsection{BlueLaTeX}
-Open source služba pro kompilaci LateX souborů. Kompilovat můžete na jejich serveru nebo nabízejí kód pro běh na vlastním serveru. Kromě samotné serverové implementace je k dispozici i webový klient. Vše je pouze zatím v Beta verzi a samotní tvůrci varují před možnými nedostatky a problémy. Hlavním lákadlem je real time spolupráce více lidí na jednom dokumentu a také možnost provozovat server lokálně. 
+http://www.bluelatex.org/
+Open source služba pro kompilaci LateX souborů. Kompilovat můžete na jejich serveru nebo nabízejí kód pro spuštění na vlastním. Kromě samotné serverové implementace je k dispozici i webový klient. Vše je pouze zatím v Beta verzi a samotní tvůrci varují před možnými nedostatky a problémy. Hlavním lákadlem je real time spolupráce více lidí na jednom dokumentu a také možnost provozovat server lokálně. 
 
 \subsection{ScienceSoft}
-http://sciencesoft.at/latex/index?lang=en 
+http://sciencesoft.at/latex/index?lang=en
+Starší služba, která mimo kompilace LaTex souborů vložených přímo na stránky poskytuje i jiné rozhraní pro posílání souborů a to skrz REST Api a SOAP. Jak bylo řečeno, tak tato služba je už starší tudíž pro kompilaci používá TexLive 2008.
 
-\subsection{CoCalc}
+\subsection{ShareLaTeX}\\
+https://github.com/sharelatex/clsi-sharelatex
+Velmi podobný BlueLaTeX, tedy open source nabízející jejich hostovanou verzi nebo lokální verzi pro vlastní potřebu, obě verze obsahují mnoho funkcí včetně grafického prostředí pro uživatele. Pod jménem ShareLaTeX se vyskytuje jenom výše zmíněné, https://www.overleaf.com/for/enterprises ovšem společně s OverLeaf také spravují službu Pro, která je určená pro firmy, ale i univerzity. Ta se pyšní možností nasazení na vlastních serverech, správou uživatelů, podporou a zabezpečením.
 
+\subsection{Porovnání}
+Každé z těchto řešení ma své problémy, ať už že je zastaralé a neaktualizované nebo nesplňují zanalyzované požadavky(kapitola 3.1). Do první skupiny patří ScienceSoft a BlueLaTex, kde první z jmenovaných ani neposkytuje kód pro implementaci na lokálním serveru a druhý je v nedodělaném stavu, což může vést k nefunkčnosti a bezpečnostním rizikům. Služba Overleaf Commons nesplňuje stejný požadavek jako řešení od ScienceSoft, ale nabízí zajímavé prostředí pro vytváření a správu LaTeX dokumentů pro studenty i zaměstnance, o čemž by univerzita mohla popřemýšlet. Nejnadějnější možností se zdá být ShareLaTeX, který poskytuje k použití i jenom backend pro kompilaci LaTeX a komunikaci, ale celý je implementovaný v CoffeeScriptu, což si rozporuje s požadavkem na implementaci, kde je Java EE. 
 
 \section{Kompilátory}
+Nejdůležitější částí celé aplikace bude kompilátor, který samozřejmě provádí kompilaci, ale může poskytnout i podporu pro operace s výsledným PDF. Tyto operace vycházejí ze stanovených funkčních požadavků(kapitola 3.1.1). Jelikož kompilace bude probíhat na serveru, kde bude nainstalován Linuxový operační systém výběr se zužuje na jedinou možnost, kterou je TeXLive.
 
+\subsection{TeXLive}
+https://www.tug.org/texlive/pkginstall.html
+Existují dvě různé cesty jak nainstalovat TeXLive a od toho se odvíjí správa balíčků. Verze Native TeX Live a distribuce přímo pro daný operační systém. Liší se ve způsobu aktualizací balíčků a základní po instalaci. V Native verzi probíhají aktualizace pomocí TeX Live Manager nebo-li tlmgr 
