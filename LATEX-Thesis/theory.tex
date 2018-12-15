@@ -2,31 +2,20 @@
   \chapter{Teorie a technologie}
   V této části si přiblížíme technologie potřebné k návrhu a vývoji webové služby specifikované v zadání práce. Postupně budou vysvětleny všechny zásadní pojmy, které pomůžou čtenáři doplnit znalosti.
   
-  
-  % ukazka citace
   \section{REST}
-	Representational state transfer (dále jen REST) je architektura pro komunikaci \cite{rest} mezi distribuovanými systémy. Aby se rozhraní mohlo nazývat REST musí splňovat těchto 5 omezení/principů \cite{restThesis}: 
+	Representational state transfer (dále jen REST) je architektura pro komunikaci  mezi distribuovanými systémy. Termín zavedl R. T. Fielding ve své disertační práci\cite{restThesis}, kde toto rozhraní bylo taktéž popsáno a vymezeno. Mimo jiné stanovil i těchto 5 základních pravidel, které by měly být dodrženy, aby se aplikace mohla nazývat RESTful\cite{rest}:
 	\begin{itemize}
-		\item Klient-Server(Clien-Server) - Toto omezení staví na principu oddělení zodpovědností (Separation of Concerns), nebo-li je klientská část starající se o uživatelské rozhraní a serverová část přistupující k databázi. Zlepšuje škálovatelnost sytému a zjednodušuje použitelnost na různých platformách.
+		\item Klient-Server(Client-Server) - Toto omezení staví na principu oddělení zodpovědností (Separation of Concerns), nebo-li je klientská část starající se o uživatelské rozhraní a serverová část přistupující k databázi. Zlepšuje škálovatelnost sytému a zjednodušuje použitelnost na různých platformách.
 		\item Bezestavovost(Stateless) - Každý požadavek musí přenášet všechna související data, server totiž neuchovává žádné informace o nynějším spojením a každý požadavek bere jako nový.
 		\item Keš(Cache) - Data přenášená v odpovědi mohou být označená jako kešovatelná, tudíž si je klient může uložit a kdykoliv použít znova.
 		\item Jednotné rozhraní(Unified interface) - Základem tohoto omezení je princip HATEOAS (Hypermedia As The Engine Of Application State), které říká, že klient nepotřebuje znát pravidla komunikace dopředu a data musí obsahovat odkazy na další data v aplikaci. Jasně definovaná adresa zdroje (např. URI), reprezentace přenášených dat (např. HTML), typ média (např. JSON)
-		\item Vrstvený systém(Layered system) - Přidáním vrstev se aplikace, kde každá vrstva je izolovaná a může komunikovat jenom s následující vrstvou, zpřehlední a zlepší se škálovatelnost.
-	\end{itemize}
-	Těchto 5 základních pravidel by mělo být dodrženo, aby se aplikace mohla nazývat RESTful.  
-	
-	Nejčastějším typem protokolu využívající tuto architekturu je Hypertext Transfer Protocol(HTTP). Pomocí třech hlavních metod GET, POST, DELETE v požadavku poslaného z klienta server buď odpovídajíce vrátí požadovaná data, přijme data poslané v těle a například uloží do databáze nebo vymaže data. 
-  
-  
- \section{LaTeX}
-	Vychází z typografického sázecího systému TeX, který takto popisuje Pavel Satrapa ve své knize \cite{latex}: \enquote{\textit{Patří do rodiny tak zvaných značkovacích jazyků (markup languages) a dal by se zjednodušeně charakterizovat jako programovací jazyk pro sazbu textů. Jeho základním vstupem je textový soubor, který obsahuje jak sázený dokument, tak příkazy ovlivňující sazbu. Určité znaky mají přiřazen speciální význam a jejich prostřednictvím jsou v textu odlišeny řídicí konstrukce. Typickým příkladem je zpětné lomítko, jímž začínají příkazy.}}
-	 
-	LaTex je rozšíření TeXu o balíček přednastavených řídících konstrukcí. Hlavní cílem těchto systému je jednoduchost pro psaní matematických a jiných vzorců. Ovšem je také velmi oblíben kvůli silné možnosti upravovat dokumenty ke svému zalibení.
-	
-	Příkazy a text se píše do souborů s příponou tex tyto soubory musí dodržovat jistou stromovou strukturou. V kořenu stromu je jeden hlavní soubor, do kterého jsou vnořovány další. To napomáhá přehlednosti velkých dokumentů a také používání již vytvořených. Následně se musí všechny soubory zkompilovat.Výstupním souborem můžou být ruzné formáty např. PDF, DVI aj. 
+		\item Vrstvený systém(Layered system) - Přidáním vrstev se aplikace, kde každá vrstva je izolovaná a může komunikovat jenom se soudějícími vrstvami, zpřehlední a zlepší se její škálovatelnost.
+	\end{itemize}	
+	Nejčastějším typem protokolu využívající tuto architekturu je Hypertext Transfer Protocol(HTTP). Pomocí třech hlavních metod GET, PUT, POST, DELETE v požadavku poslaného z klienta server buď odpovídajíce vrátí požadovaná data, přijme data poslané v těle a například uloží do databáze, nebo data vymaže. 
 
 \section{Java EE}
-	Tato platforma je rozšířením standardní Javy SE a je primárně určená pro vývoj webových aplikací. Java EE potřebuje ke svému fungování aplikační server, který se stará o požadavky, komunikuje s databází apod. Hlavním výstupem aplikace je HTML generované na serveru a zpracované na klientovi, to je rozdíl oproti standardní Javě, kde vše probíhá na klientovi. 
+	Tato platforma je rozšířením standardní Javy SE a je primárně určená pro vývoj webových aplikací. Nabízí  Java EE potřebuje ke svému fungování aplikační server, který se stará o požadavky, komunikuje s databází apod. Mezi hlavní pojmy patří bean, container, component, dependency injection, 
+	
 
 \section{PDF}
 	Portable Document Format(dále jen PDF), jak už název napovídá jedná se o formát dokumentů, jejichž hlavním cílem je poskytování nazávislosti na platformě. Soubor se skládá ze čtyř komponent: 
@@ -48,9 +37,15 @@
 		\item Content stream - Objekt v kterém se nacházejí instrukce k vykreslování grafických elementů. 
 	\end{itemize}
 	
+ \section{LaTeX}
+	Vychází z typografického sázecího systému TeX, který popisuje Pavel Satrapa ve své knize \cite{latex}: \enquote{\textit{Patří do rodiny tak zvaných značkovacích jazyků (markup languages) a dal by se zjednodušeně charakterizovat jako programovací jazyk pro sazbu textů. Jeho základním vstupem je textový soubor, který obsahuje jak sázený dokument, tak příkazy ovlivňující sazbu. Určité znaky mají přiřazen speciální význam a jejich prostřednictvím jsou v textu odlišeny řídicí konstrukce. Typickým příkladem je zpětné lomítko, jímž začínají příkazy.}}
+	
+	LaTex je rozšíření TeXu o balíček přednastavených řídících konstrukcí. Hlavní cílem těchto systému je jednoduchost pro psaní matematických a jiných vzorců. Ovšem je také velmi oblíben kvůli silné možnosti upravovat dokumenty ke svému zalibení.
+	
+	Příkazy a text se píše do souborů s příponou tex tyto soubory musí dodržovat jistou stromovou strukturou. V kořenu stromu je jeden hlavní soubor, do kterého jsou vnořovány další. To napomáhá přehlednosti velkých dokumentů a také používání již vytvořených. Následně se musí všechny soubory zkompilovat do výstupního souboru, který může být například ve formátu PDF nebo DVI. 
 
 \section{FURPS+}
-	Vzniklo rozšířením klasifikací požadavků FURPS(\textbf{F}unctionality, \textbf{U}sability, \textbf{R}eliability, \textbf{P}erformance, \textbf{S}upportability) s kterou přišel Robert Grady v roce 1992. Znaménko "+" ve zkratce přidává požadavky a omezení na design, implementaci, rozhraní a hardware. 
+	Vychází z klasifikace požadavků FURPS(\textbf{F}unctionality, \textbf{U}sability, \textbf{R}eliability, \textbf{P}erformance, \textbf{S}upportability) s kterou přišel Robert Grady v roce 1992. Roku 1999 Jacobson at el rozšířili specifikaci o znaménko "+", které přidává požadavky a omezení na design, implementaci, rozhraní a hardware. 
 	
 	\begin{itemize}
 		\item Funkční požadavky

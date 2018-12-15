@@ -26,7 +26,7 @@
  	\caption{Funkční požadavky}
  	\label{tab:errors}
  \end{table} 
- Služba ma jasný účel a z toho i plyne menší množství funkcionalit.  
+ Služba ma jediný a ůzký účel a z toho i plyne menší množství funkcionalit.  
  
  \subsection{Nefunkční požadavky}
  
@@ -35,17 +35,19 @@
  		\begin{tabular}{ p{4cm} P{8,6cm} }
  			\textbf{Typ} & \textbf{Požadavky} \\
  			\midrule[0,15em]
- 			Použitelnost & \tabitem Dokumentace k rozhraní na swagger.com\\
+ 			Použitelnost & \tabitem Dokumentace k rozhraní na swagger\\
  						& \tabitem Přístup skrz REST api, pouze s tokenem\\
  			\midrule		
  			Spolehlivost & \tabitem Služba není kritická\\
- 										& \tabitem Autorizace pomocí OAuth\\
+ 						& \tabitem Uptime 95\%\\
+ 						& \tabitem Ochrana proti špatnémmu vstupu\\
+ 						& \tabitem Autorizace pomocí tokenů\\
  			\midrule
  			Výkon & \tabitem Zvládnutí obsloužení desítky požadavků najednou\\
  						& \tabitem Ukládání výsledných dokumentů po dobu jednoho měsíce\\
  						& \tabitem Maximální doba tvorby dokumentu 5 minut\\	
 			\midrule
-			Podporovatelnost & \tabitem Dokumentace k rozhraní na swagger.com\\
+			Podporovatelnost & \tabitem Dokumentace k rozhraní na swagger\\
 							& \tabitem Služba může být rozšířena o kompilování samotného TeXu a může podporovat vytváření i jiných formátů z LaTeXu\\	
 			\midrule
 			Implementace & \tabitem Platforma - Java EE\\
@@ -53,10 +55,10 @@
 			\midrule
  			Rozhraní & \tabitem Komunikuje s Moodle a CourseWare, tyto portály posílají data\\
  			\midrule
- 			Fyzické & \tabitem Musí být provozováno na serverech ČVUT
+ 			Fyzické & \tabitem Musí být provozováno na serverech ČVUT, kvůli ochraně dat\\
  	\end{tabular}
  	\end{center}
- 	\caption{Funkční a nefunkční požadavky}
+ 	\caption{Nefunkční požadavky}
  	\label{tab:errors}
  \end{table}
  
@@ -77,7 +79,7 @@ Open source služba pro kompilaci LateX souborů. Kompilovat můžete na jejich 
 http://sciencesoft.at/latex/index?lang=en
 Starší služba, která mimo kompilace LaTex souborů vložených přímo na stránky poskytuje i jiné rozhraní pro posílání souborů a to skrz REST Api a SOAP. Jak bylo řečeno, tak tato služba je už starší tudíž pro kompilaci používá TexLive 2008.
 
-\subsection{ShareLaTeX}\\
+\subsection{ShareLaTeX}
 https://github.com/sharelatex/clsi-sharelatex
 Velmi podobný BlueLaTeX, tedy open source nabízející jejich hostovanou verzi nebo lokální verzi pro vlastní potřebu, obě verze obsahují mnoho funkcí včetně grafického prostředí pro uživatele. Pod jménem ShareLaTeX se vyskytuje jenom výše zmíněné, https://www.overleaf.com/for/enterprises ovšem společně s OverLeaf také spravují službu Pro, která je určená pro firmy, ale i univerzity. Ta se pyšní možností nasazení na vlastních serverech, správou uživatelů, podporou a zabezpečením.
 
@@ -85,8 +87,15 @@ Velmi podobný BlueLaTeX, tedy open source nabízející jejich hostovanou verzi
 Každé z těchto řešení ma své problémy, ať už že je zastaralé a neaktualizované nebo nesplňují zanalyzované požadavky(kapitola 3.1). Do první skupiny patří ScienceSoft a BlueLaTex, kde první z jmenovaných ani neposkytuje kód pro implementaci na lokálním serveru a druhý je v nedodělaném stavu, což může vést k nefunkčnosti a bezpečnostním rizikům. Služba Overleaf Commons nesplňuje stejný požadavek jako řešení od ScienceSoft, ale nabízí zajímavé prostředí pro vytváření a správu LaTeX dokumentů pro studenty i zaměstnance, o čemž by univerzita mohla popřemýšlet. Nejnadějnější možností se zdá být ShareLaTeX, který poskytuje k použití i jenom backend pro kompilaci LaTeX a komunikaci, ale celý je implementovaný v CoffeeScriptu, což si rozporuje s požadavkem na implementaci, kde je Java EE. 
 
 \section{Kompilátory}
-Nejdůležitější částí celé aplikace bude kompilátor, který samozřejmě provádí kompilaci, ale může poskytnout i podporu pro operace s výsledným PDF. Tyto operace vycházejí ze stanovených funkčních požadavků(kapitola 3.1.1). Jelikož kompilace bude probíhat na serveru, kde bude nainstalován Linuxový operační systém výběr se zužuje na jedinou možnost, kterou je TeXLive.
+Nejdůležitější částí celé aplikace bude kompilátor, který samozřejmě provádí kompilaci, ale může poskytnout i podporu pro operace s výsledným PDF. Tyto operace vycházejí ze stanovených funkčních požadavků(kapitola 3.1.1). Jelikož kompilace bude probíhat na serveru, kde bude nainstalován Linuxový operační systém.
+
+\subsection{MikTeX}
+https://miktex.org/kb/just-enough-tex
+“Just enough TeX” neboli jen to nejnutnější poskytuje tato instalace, tedy bez zbyteěných balíčků navíc. Ovšem MikTex nabízí dostahovávat balíčky za běhu, pdolě potřeby.
 
 \subsection{TeXLive}
 https://www.tug.org/texlive/pkginstall.html
 Existují dvě různé cesty jak nainstalovat TeXLive a od toho se odvíjí správa balíčků. Verze Native TeX Live a distribuce přímo pro daný operační systém. Liší se ve způsobu aktualizací balíčků a základní po instalaci. V Native verzi probíhají aktualizace pomocí TeX Live Manager nebo-li tlmgr 
+
+\subsection{Porovnání}
+Oba kompilátory podporují aspoň n

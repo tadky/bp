@@ -32,13 +32,15 @@
 \contentsline {subsection}{\numberline {3.1.1}Funk\IeC {\v c}n\IeC {\'\i } po\IeC {\v z}adavky}{6}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Nefunk\IeC {\v c}n\IeC {\'\i } po\IeC {\v z}adavky}{7}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}Existuj\IeC {\'\i }c\IeC {\'\i } \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{7}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}OverLeaf}{7}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.1}OverLeaf}{8}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}BlueLaTeX}{8}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}ScienceSoft}{8}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}ShareLaTeX}{8}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}Porovn\IeC {\'a}n\IeC {\'\i }}{8}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}Kompil\IeC {\'a}tory}{8}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}TeXLive}{9}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.3}Kompil\IeC {\'a}tory}{9}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}MikTeX}{9}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}TeXLive}{9}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Porovn\IeC {\'a}n\IeC {\'\i }}{9}{subsection.3.3.3}
 \contentsline {chapter}{\numberline {4}N\IeC {\'a}vrh}{10}{chapter.4}
 \contentsline {section}{\numberline {4.1}}{10}{section.4.1}
 \contentsline {chapter}{\numberline {5}Implementace}{11}{chapter.5}
