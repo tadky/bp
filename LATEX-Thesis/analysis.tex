@@ -17,16 +17,16 @@
  			&\multicolumn{2}{P{7,6cm}}{\tabitem Zkompilování LaTeX souborů s požadovaným nastavením do PDF}\\
  			&\multicolumn{2}{l}{\tabitem Uložení PDF a jeho poskytnutí}\\	
  			&\multicolumn{2}{l}{\tabitem Uživatel může zvolit tyto nastavení:}\\
- 			&&\tabitem Přidat vodoznak na kařdou stranu PDF\\
- 			&&\tabitem Nakonec souboru přidat stránku s předem stanoveným obsahem\\
- 			&&\tabitem Výsledný soubor PDF bude chráněný\\
- 			&&\tabitem Výsledný soubor PDF nebude kopírovatelný nebo tisknutelný\\
+ 			&&\tabitem {\small Přidat vodoznak na každou stranu PDF}\\
+ 			&&\tabitem {\small Nakonec souboru přidat stránku s předem stanoveným obsahem}\\
+ 			&&\tabitem {\small Výsledný soubor PDF bude chráněný}\\
+ 			&&\tabitem {\small Výsledný soubor PDF nebude kopírovatelný nebo tisknutelný}\\
  		\end{tabular}
  	\end{center}
  	\caption{Funkční požadavky}
  	\label{tab:errors}
  \end{table} 
- Služba ma jediný a ůzký účel a z toho i plyne menší množství funkcionalit.  
+ Služba ma jediný a specifický účel, z toho plyne menší množství funkcionalit. 
  
  \subsection{Nefunkční požadavky}
  
@@ -36,19 +36,18 @@
  			\textbf{Typ} & \textbf{Požadavky} \\
  			\midrule[0,15em]
  			Použitelnost & \tabitem Dokumentace k rozhraní na swagger\\
- 						& \tabitem Přístup skrz REST api, pouze s tokenem\\
+ 						& \tabitem Přístup skrz REST Api, pouze s tokenem\\
  			\midrule		
  			Spolehlivost & \tabitem Služba není kritická\\
- 						& \tabitem Uptime 95\%\\
- 						& \tabitem Ochrana proti špatnémmu vstupu\\
+ 						& \tabitem Uptime 95\% času\\
+ 						& \tabitem Ochrana proti špatnému vstupu\\
  						& \tabitem Autorizace pomocí tokenů\\
  			\midrule
  			Výkon & \tabitem Zvládnutí obsloužení desítky požadavků najednou\\
  						& \tabitem Ukládání výsledných dokumentů po dobu jednoho měsíce\\
  						& \tabitem Maximální doba tvorby dokumentu 5 minut\\	
 			\midrule
-			Podporovatelnost & \tabitem Dokumentace k rozhraní na swagger\\
-							& \tabitem Služba může být rozšířena o kompilování samotného TeXu a může podporovat vytváření i jiných formátů z LaTeXu\\	
+			Podporovatelnost & \tabitem Služba může být rozšířena o kompilování samotného TeXu a může podporovat vytváření i jiných formátů z LaTeXu\\	
 			\midrule
 			Implementace & \tabitem Platforma - Java EE\\
 						& \tabitem Komunikace - REST Api\\
@@ -62,18 +61,23 @@
  	\label{tab:errors}
  \end{table}
  
+ Některé z požadavků upřesníme
+ \begin{itemize}
+ 	\item 
+ \end{itemize}
+ 
  Z tabulky je vidět, že služba není nijak kritická a působí jenom jako doplněk do výše zmíněných portálů. Musí ovšem splňovat vyšší bezpečnostní nároky zapříčiněné prostředím v jakém se bude používat. 
 
 \section{Existující řešení}
-Na základě stanovených požadavků v minulé kapitole přejdeme k analýze již existujících řešení. Mometálně uživatelé Moodle mohou vkládat do svých souborů řádkové příkazy, což není úplně dostačující a nesplňuje to požadavky. Samozřejmě se dají používat pro vytváření PDF z LaTeX souborů kompilátory, které si můžete stáhnout a používat lokálně. To ovšem není předmětem této práce, a proto se podíváme na webové služby, které více odpovídají potřebám. Pár vybraných si představíme.  
+Na základě stanovených požadavků v minulé kapitole přejdeme k analýze již existujících řešení. Momentálně uživatelé Moodle mohou vkládat do svých souborů řádkové příkazy, což není úplně dostačující a nesplňuje to požadavky. Samozřejmě se dají používat pro vytváření PDF z LaTeX souborů kompilátory, které si můžete stáhnout a používat lokálně. To ovšem není předmětem této práce, a proto se podíváme na webové služby, které více odpovídají potřebám. Pár vybraných si představíme.  
 
 \subsection{OverLeaf}
 https://www.overleaf.com/for/universities
-Placená služba pro tvorbu LaTeX dokumentů, která umožňuje i používání s omezeními zadarmo. Je velmi oblíbená hlavně kvůli hezkému prostředí pro tvorbu dokumentů a jejich správu. Také nabízí výhody pro určité zájmové skupiny, nejzajimavější vzhledem k tématu této práce je předplatitelská služba OverLeaf Commons https://www.overleaf.com/for/universities. Ta poskytuje sdílené prostředí se všemi výhodami pro zaměstnance a studenty univerzity.
+Placená služba pro tvorbu LaTeX dokumentů, která umožňuje i používání s omezeními zadarmo. Je velmi oblíbená hlavně kvůli hezkému prostředí pro tvorbu dokumentů a jejich správu. Také nabízí výhody pro určité zájmové skupiny, nejzajímavější vzhledem k tématu této práce je předplatitelská služba OverLeaf Commons https://www.overleaf.com/for/universities. Ta poskytuje sdílené prostředí se všemi výhodami pro zaměstnance a studenty univerzity.
 
 \subsection{BlueLaTeX}
 http://www.bluelatex.org/
-Open source služba pro kompilaci LateX souborů. Kompilovat můžete na jejich serveru nebo nabízejí kód pro spuštění na vlastním. Kromě samotné serverové implementace je k dispozici i webový klient. Vše je pouze zatím v Beta verzi a samotní tvůrci varují před možnými nedostatky a problémy. Hlavním lákadlem je real time spolupráce více lidí na jednom dokumentu a také možnost provozovat server lokálně. 
+Open source služba pro kompilaci LateX souborů. Kompilovat můžete na jejich serveru nebo nabízejí kód pro spuštění na vlastním. Kromě samotné serverové implementace je k dispozici i webový klient. Vše je pouze zatím v Beta verzi a samotní tvůrci varují před možnými nedostatky a problémy. Hlavním lákadlem je souběžná spolupráce více lidí na jednom dokumentu a také možnost provozovat server lokálně. 
 
 \subsection{ScienceSoft}
 http://sciencesoft.at/latex/index?lang=en
@@ -81,21 +85,21 @@ Starší služba, která mimo kompilace LaTex souborů vložených přímo na st
 
 \subsection{ShareLaTeX}
 https://github.com/sharelatex/clsi-sharelatex
-Velmi podobný BlueLaTeX, tedy open source nabízející jejich hostovanou verzi nebo lokální verzi pro vlastní potřebu, obě verze obsahují mnoho funkcí včetně grafického prostředí pro uživatele. Pod jménem ShareLaTeX se vyskytuje jenom výše zmíněné, https://www.overleaf.com/for/enterprises ovšem společně s OverLeaf také spravují službu Pro, která je určená pro firmy, ale i univerzity. Ta se pyšní možností nasazení na vlastních serverech, správou uživatelů, podporou a zabezpečením.
+Velmi podobný BlueLaTeXu, tedy open source nabízející jimi hostovanou verzi nebo lokální verzi pro vlastní potřebu, obě verze obsahují mnoho funkcí včetně grafického prostředí pro uživatele. Pod jménem ShareLaTeX se vyskytuje jenom výše zmíněné, https://www.overleaf.com/for/enterprises ovšem společně s OverLeaf také spravují službu Pro, která je určená pro firmy, ale i univerzity. Ta se pyšní možností nasazení na vlastních serverech, správou uživatelů, podporou a zabezpečením.
 
 \subsection{Porovnání}
-Každé z těchto řešení ma své problémy, ať už že je zastaralé a neaktualizované nebo nesplňují zanalyzované požadavky(kapitola 3.1). Do první skupiny patří ScienceSoft a BlueLaTex, kde první z jmenovaných ani neposkytuje kód pro implementaci na lokálním serveru a druhý je v nedodělaném stavu, což může vést k nefunkčnosti a bezpečnostním rizikům. Služba Overleaf Commons nesplňuje stejný požadavek jako řešení od ScienceSoft, ale nabízí zajímavé prostředí pro vytváření a správu LaTeX dokumentů pro studenty i zaměstnance, o čemž by univerzita mohla popřemýšlet. Nejnadějnější možností se zdá být ShareLaTeX, který poskytuje k použití i jenom backend pro kompilaci LaTeX a komunikaci, ale celý je implementovaný v CoffeeScriptu, což si rozporuje s požadavkem na implementaci, kde je Java EE. 
+Každé z těchto řešení ma své problémy, ať už že je zastaralé a neaktualizované nebo nesplňují zanalyzované požadavky(kapitola 3.1). Do první skupiny patří ScienceSoft a BlueLaTex, kde první z jmenovaných ani neposkytuje kód pro implementaci na lokálním serveru a druhý je v nedodělaném stavu, což může vést k nefunkčnosti a bezpečnostním rizikům. Služba Overleaf Commons nesplňuje stejný požadavek jako řešení od ScienceSoft, ale nabízí zajímavé prostředí pro vytváření a správu LaTeX dokumentů pro studenty i zaměstnance, o čemž by univerzita mohla popřemýšlet. Nejnadějnější možností se zdá být ShareLaTeX, který poskytuje k použití i jenom backendovou část pro kompilaci LaTeX a komunikaci, ale celý je implementovaný v CoffeeScriptu, což si rozporuje s požadavkem na implementaci, kde je Java EE. 
 
 \section{Kompilátory}
-Nejdůležitější částí celé aplikace bude kompilátor, který samozřejmě provádí kompilaci, ale může poskytnout i podporu pro operace s výsledným PDF. Tyto operace vycházejí ze stanovených funkčních požadavků(kapitola 3.1.1). Jelikož kompilace bude probíhat na serveru, kde bude nainstalován Linuxový operační systém.
+Nejdůležitější částí celé aplikace bude kompilátor, který bude provádět kompilaci LaTex souborů, ale může poskytnout i podporu pro operace s výsledným PDF. Tyto operace vycházejí ze stanovených funkčních požadavků(kapitola 3.1.1). Jelikož kompilace bude probíhat na serveru s Linuxovým operačním systémem.
 
 \subsection{MikTeX}
 https://miktex.org/kb/just-enough-tex
-“Just enough TeX” neboli jen to nejnutnější poskytuje tato instalace, tedy bez zbyteěných balíčků navíc. Ovšem MikTex nabízí dostahovávat balíčky za běhu, pdolě potřeby.
+Velmi oblíbený hlavně na platformě Window, díky příjemné instalaci a kvůli možnosti doinstalovávat balíčky "on-the-fly", neboli za běhu. Ale je poskytován i mimo jiné pro Linux a to například pro potřeby této práce v zajímavé verzi “Just enough TeX”. Tato instalace obsahuje jen to nejnutnější, tedy bez zbytečných balíčků navíc. Je vyvíjen jediným programátorem, který se stará o celou distribuci, což je do budoucnosti lehce rizikové z pohledu udržitelnosti. 
 
 \subsection{TeXLive}
 https://www.tug.org/texlive/pkginstall.html
-Existují dvě různé cesty jak nainstalovat TeXLive a od toho se odvíjí správa balíčků. Verze Native TeX Live a distribuce přímo pro daný operační systém. Liší se ve způsobu aktualizací balíčků a základní po instalaci. V Native verzi probíhají aktualizace pomocí TeX Live Manager nebo-li tlmgr 
+Existují dvě různé cesty jak tento kompilátor nainstalovat a od toho se odvíjí správa balíčků. Verze Native TeX Live a distribuce přímo pro daný operační systém. Liší se ve počtu balíčků po instalaci a způsobu jejich aktualizací. V Native verzi probíhají aktualizace pomocí TeX Live Manager nebo-li tlmgr, jinak se o to stará samotný operační systém. Pokud si vyberete Native je možno si i zvolit schéma, které určuje množství balíčků např. scheme-basic obsahuje jenom to nejnutnější. 
 
 \subsection{Porovnání}
-Oba kompilátory podporují aspoň n
+Oba kompilátory jsou si velmi podobné a liší se jenom v drobnostech, některé už byly nastíněny v jejich popisech. Jedním z důležitých aspektů je velikost instalace, tedy i s balíčky, v této kategorii nabízejí oba to samé. K tomuto se váže práce s balíčky, kde už je jiná situace a to kvůli jasné výhodě MikTexu stahovat balíčky během běhu. Něco podobného jde dosáhnout i TexLive, ale je nutno použít externí skripty, což může mnohem více ovlivňovat rychlost kompilace.

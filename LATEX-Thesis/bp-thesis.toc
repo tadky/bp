@@ -23,10 +23,9 @@
 \contentsline {section}{\numberline {1.1}C\IeC {\'\i }le pr\IeC {\'a}ce}{1}{section.1.1}
 \contentsline {chapter}{\numberline {2}Teorie a technologie}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}REST}{2}{section.2.1}
-\contentsline {section}{\numberline {2.2}LaTeX}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}Java EE}{3}{section.2.3}
-\contentsline {section}{\numberline {2.4}PDF}{3}{section.2.4}
-\contentsline {section}{\numberline {2.5}FURPS+}{4}{section.2.5}
+\contentsline {section}{\numberline {2.2}PDF}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}LaTeX}{4}{section.2.3}
+\contentsline {section}{\numberline {2.4}FURPS+}{5}{section.2.4}
 \contentsline {chapter}{\numberline {3}Anal\IeC {\'y}za}{6}{chapter.3}
 \contentsline {section}{\numberline {3.1}Po\IeC {\v z}adavky}{6}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Funk\IeC {\v c}n\IeC {\'\i } po\IeC {\v z}adavky}{6}{subsection.3.1.1}
@@ -42,10 +41,11 @@
 \contentsline {subsection}{\numberline {3.3.2}TeXLive}{9}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Porovn\IeC {\'a}n\IeC {\'\i }}{9}{subsection.3.3.3}
 \contentsline {chapter}{\numberline {4}N\IeC {\'a}vrh}{10}{chapter.4}
-\contentsline {section}{\numberline {4.1}}{10}{section.4.1}
-\contentsline {chapter}{\numberline {5}Implementace}{11}{chapter.5}
-\contentsline {chapter}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{12}{chapter.6}
-\contentsline {chapter}{Literatura}{13}{chapter*.5}
-\contentsline {chapter}{\numberline {A}Seznam zdroj\IeC {\r u}}{14}{appendix.A}
-\contentsline {chapter}{\numberline {B}Seznam zkratek}{15}{appendix.B}
-\contentsline {chapter}{\numberline {C}Testov\IeC {\'a}n\IeC {\'\i }}{16}{appendix.C}
+\contentsline {section}{\numberline {4.1}N\IeC {\'a}vrh}{10}{section.4.1}
+\contentsline {section}{\numberline {4.2}Architektura}{10}{section.4.2}
+\contentsline {chapter}{\numberline {5}Implementace}{12}{chapter.5}
+\contentsline {chapter}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{13}{chapter.6}
+\contentsline {chapter}{Literatura}{14}{chapter*.5}
+\contentsline {chapter}{\numberline {A}Seznam zdroj\IeC {\r u}}{15}{appendix.A}
+\contentsline {chapter}{\numberline {B}Seznam zkratek}{16}{appendix.B}
+\contentsline {chapter}{\numberline {C}Testov\IeC {\'a}n\IeC {\'\i }}{17}{appendix.C}

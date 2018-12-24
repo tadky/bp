@@ -1,3 +1,14 @@
 \chapter{Návrh}  
 
-\section{}
+V této části popíšeme používané technologie
+
+\section{Návrh}
+Na základě požadavků bude web služba postavena na Java EE, což je platforma pro vývoj webových aplikací, rozšiřující standardní Javu SE. Představíme si alespoň jednu základní techniku, kterou poskytuje navíc. 
+\par
+\textbf{Vkládání závislostí} (dependency injection) umožňuje objektu používat jiné objekty bez potřeby ho zatěžovat jejich vytvářením. Obekty, které můžeme takto vkládat se nazývají beany a právě o jejich vytváření a zánik se stará Contexts and Dependency Injection(dále jen CDI) kontejner.
+
+Dále je potřeba specifikovat aplikační server, ten poskytuje pro webové aplikace běhové prostředí, tedy zajišťuje správu databázových spojení apod. Na základě zkušeností je vybrán open-source Payara, který staví na GlassFish, o proti němu poskytuje častější aktualizace a opravy chyb. 
+
+
+
+\section{Architektura}

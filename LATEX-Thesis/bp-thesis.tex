@@ -1,5 +1,5 @@
 \documentclass{ctuthesis}
-\usepackage{float}
+%\usepackage{float}
 \usepackage{csquotes}
 \usepackage{multirow}
 \usepackage{booktabs}
@@ -8,7 +8,6 @@
 \usepackage{array}
 \usepackage{ragged2e}
 \newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
-
 
 \ctusetup{
 	doctype-czech = {Bakalářská práce},
@@ -37,6 +36,8 @@
 \addto\ctucaptionsczech{%
 	\def\supervisorname{Vedoucí}%
 }
+
+\setcounter{tocdepth}{1}
 
 % Podekovani
 \begin{thanks}
