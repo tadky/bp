@@ -1,5 +1,17 @@
 \begin{thebibliography}{1}
 
+\bibitem{pdf}
+Document management - portable document format - part 1: Pdf 1.7.
+\newblock
+  \url{https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf},
+  2008.
+
+\bibitem{furps}
+{\sc Dutoit, B. B. . A.~H.}
+\newblock {\em Object-Oriented Software Engineering Using UML, Patterns, and
+  Java}.
+\newblock 2009.
+
 \bibitem{restThesis}
 {\sc Fielding, R.~T.}
 \newblock {\em Architectural Styles and the Design of Network-based Software

@@ -3,5 +3,9 @@ The style file: acm.bst
 Database file #1: ctubib.bib
 Warning--string name "september" is undefined
 --line 23 of file ctubib.bib
+Warning--string name "august" is undefined
+--line 37 of file ctubib.bib
+Warning--to sort, need author or key in pdf
+Warning--empty publisher in furps
 Warning--empty publisher in latex
-(There were 2 warnings)
+(There were 5 warnings)
