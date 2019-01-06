@@ -42,7 +42,9 @@
 	
 	\LaTeX\ je rozšíření \TeX u o balíček přednastavených řídících konstrukcí. Hlavní cílem těchto systému je jednoduchost pro psaní matematických a jiných vzorců. Ovšem je také velmi oblíben kvůli silné možnosti jednoduše upravovat dokumenty ke svému zalíbení, přestože prvotní seznámení je náročnější oproti jiným nástrojům ke psaní.
 	
-	Soubor se skládá z preambule, která obsahuje nastavení pro celý dokument, toto nastavení může být v jiném souboru a případně používané balíčky. Druhá část je dokumentu v kterém se mimo jiné nachází kapitoly, sekce a podobně. Základní syntaxe může vypadat takto.
+	Základní soubory mají příponu tex kromě souboru s nastavením, ten je ve formátu cls, neboli class file. Tyto soubory mohou být uspořádány do stromové struktury, kde v kořenu stromu je jeden hlavní soubor, do kterého jsou vnořovány další, ale vše může být i v jednom. To napomáhá přehlednosti velkých dokumentů a také používání již vytvořených. 
+	
+	Soubor se skládá z preambule, která obsahuje nastavení pro celý dokument a případně používané balíčky. Druhá část je dokumentu v kterém se mimo jiné nachází kapitoly, sekce a podobně. Základní syntaxe může vypadat takto.
 	\begin{verbatim}
 	\documentclass{thesis}
 	\usepackage{csquotes}
@@ -52,15 +54,15 @@
 	\end{document}
 	\end{verbatim}
 	
-	Základní soubory mají příponu tex kromě souboru s nastavením, ten je ve formátu cls, neboli class file. Tyto soubory mohou být uspořádány do stromové struktury, kde v kořenu stromu je jeden hlavní soubor, do kterého jsou vnořovány další, ale vše může být i v jednom. To napomáhá přehlednosti velkých dokumentů a také používání již vytvořených. 
+	Výše zmíněné balíčky slouží k přidávaní dalších před vytvořených řídících konstrukcí. Tyto balíčky buď jsou nainstalovány s instalací kompilátoru nebo je možné je ručně doinstalovávat podle potřeby. 
 	
 	Pro získání výsledného dokumentu, například ve formátu PDF, je potřeba vše zkompilovat. To provádí kompilátor.  
 
 \section{Moodle a CourseWare}
-	Ačkoliv tyto portály se v mnoha aspektech liší v rámci této práce je můžeme považovat za ekvivalentní. Oba slouží pro podporu studia a to hlavně v podobě poskytování informací o předmětech studentům, které je mají zapsané. Vyučující takto může předat informace o harmonogramu kurzu, přednášky a jiné materiály. Moodle je komplexnější open-source systém s možností upravovat ho ke své potřebě, který navíc poskytuje prostředí pro vytváření a psaní testů, zapisování docházky, komunikaci se studenty a jiné.
+	Ačkoliv tyto portály se v mnoha aspektech liší v rámci této práce je můžeme považovat za ekvivalentní. Oba slouží pro podporu studia a to hlavně v podobě poskytování informací o předmětech studentům, kteří je mají zapsané. Vyučující takto může předat informace o harmonogramu kurzu, přednášky a jiné materiály. Moodle je komplexnější open-source systém s možností upravovat ho k potřebě vzdělávacího zařízení, který navíc poskytuje prostředí pro vytváření a psaní testů, zapisování docházky, komunikaci se studenty a jiné.
 
 \section{FURPS+}
-	Vychází z klasifikace požadavků FURPS(\textbf{F}unctionality, \textbf{U}sability, \textbf{R}eliability, \textbf{P}erformance, \textbf{S}upportability) s kterou přišel Robert Grady v roce 1992. Roku 1999, Jacobson at el rozšířili specifikaci o znaménko "+", které přidává požadavky a omezení na návrh, implementaci, rozhraní a hardware\cite{furps}. 
+	Vychází z klasifikace požadavků FURPS(\textbf{F}unctionality, \textbf{U}sability, \textbf{R}eliability, \textbf{P}erformance, \textbf{S}upportability) s kterou přišel Robert Grady v roce 1992. Roku 1999, Jacobson at el rozšířili specifikaci o znaménko \enquote{+}, které přidává požadavky a omezení na návrh, implementaci, rozhraní a hardware\cite{furps}. 
 	
 	\begin{itemize}
 		\item Funkční požadavky

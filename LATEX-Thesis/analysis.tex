@@ -1,11 +1,11 @@
  \chapter{Analýza}
  
  
- \section{Požadavky}
+ \section{Požadavky} \label{requirements}
  Nyní představíme požadavky kladené na aplikaci. Ty jsou buď požadované zadávajícím nebo odvozené z potřeb, ke kterým bude služba používána.Ale i z omezení plynoucích z prostředí v jakém bude provozována, v tomto případě pro fakultu státní vysoké školy, jmenovitě Fakulta elektrotechnická, ČVUT. \\
  Za pomoci metody FURPS+ rozdělíme požadavky a omezení na funkční a nefunkční. 
  
- \subsection{Funkční požadavky}
+ \subsection{Funkční požadavky} \label{functional}
  \begin{table}[H]
  	\begin{center}
  		\begin{tabular}{ p{4cm} P{0,7cm} P{7,9cm} }
@@ -51,6 +51,7 @@
 			\midrule
 			Implementace & \tabitem Platforma - Java EE\\
 						& \tabitem Komunikace - REST Api\\
+						& \tabitem Operační systém - Ubuntu nebo CentOS\\
 			\midrule
  			Rozhraní & \tabitem Komunikuje s Moodle a CourseWare, tyto portály posílají data\\
  			\midrule
@@ -61,41 +62,43 @@
  	\label{tab:errors}
  \end{table}
  
- Některé z požadavků zdůvodníme.
+ Důvody některých požadavků nemusejí být úplně jasné, proto je zmíníme.
  \begin{itemize}
- 	\item Java EE - Je požadováno kvůli prostředí vývoje, kde to je hlavní platforma. Tudíž je zajištěna podpora. 
+ 	\item Platforma - Je požadováno prostředím vývoje, kde Java EE je hlavní platforma. Tudíž je zajištěna podpora. 
+ 	\item Operační systém - Také vyžadováno z pohledu podpory, zmíněné systémy jsou na serverech, kde bude služba nasazena nejčastěji používány a tudíž správci tyto systémy znají.   
  	\item Služba není kritická - Poskytuje funkčnost, která nijak neovlivňuje základní funkcionality určených portálů. 
- 	\item Musí být provozováno na serverech ČVUT - Jelikož aplikace bude pracovat s dokumenty a popřípadě i informacemi, spojenými s pracovníky školy, je potřeba tyto data chránit a uchovávat na vlastních serverech.
+ 	\item Musí být provozováno na serverech ČVUT - Jelikož aplikace bude pracovat s dokumenty a popřípadě i informacemi, spojenými s pracovníky školy, je potřeba tyto data chránit a uchovávat na vlastních serverech z důvodu GDPR.
  \end{itemize}
  
  Z tabulky je vidět, že služba není nijak kritická a působí jenom jako doplněk do výše zmíněných portálů. Musí ovšem splňovat vyšší bezpečnostní nároky zapříčiněné prostředím v jakém se bude používat. 
 
 \section{Existující řešení}
-Na základě stanovených požadavků v minulé kapitole přejdeme k analýze již existujících řešení. Momentálně uživatelé Moodle mohou vkládat do svých souborů řádkové příkazy, což není úplně dostačující a nesplňuje to požadavky. Samozřejmě se dají používat pro vytváření PDF z \LaTeX\ souborů kompilátory, které si můžete stáhnout a používat lokálně. To ovšem není předmětem této práce, a proto se podíváme na webové služby, které více odpovídají potřebám. Pár vybraných si představíme.  
+Na základě stanovených požadavků v minulé kapitole přejdeme k analýze již existujících řešení. Momentálně uživatelé Moodle mohou vkládat do svých souborů řádkové příkazy, což není úplně dostačující a nesplňuje to požadavky. Samozřejmě se dají používat pro vytváření PDF z \LaTeX\ souborů kompilátory, které si můžete stáhnout a používat lokálně. To ovšem není předmětem této práce, a proto se podíváme na webové služby, které více odpovídají potřebám a požadavkům. Pár vybraných si představíme.  
 
 \subsection{OverLeaf}
-Placená služba\footnote{https://www.overleaf.com/for/universities} pro tvorbu \LaTeX\ dokumentů, která umožňuje i používání s omezeními zadarmo. Je velmi oblíbená hlavně kvůli hezkému prostředí pro tvorbu dokumentů a jejich správu. Také nabízí výhody pro určité zájmové skupiny, nejzajímavější vzhledem k tématu této práce je předplatitelská služba OverLeaf Commons \footnote{https://www.overleaf.com/for/universities}. Ta poskytuje sdílené prostředí se všemi výhodami pro zaměstnance a studenty univerzity.
+Placená služba\footnote{https://www.overleaf.com} pro tvorbu \LaTeX\ dokumentů, která umožňuje i používání zadarmo s některými omezeními. Je velmi oblíbená hlavně kvůli hezkému prostředí pro tvorbu dokumentů a jejich správu. Také nabízí výhody pro určité zájmové skupiny, nejzajímavější vzhledem k tématu této práce je předplatitelská služba OverLeaf Commons \footnote{https://www.overleaf.com/for/universities}. Ta poskytuje sdílené prostředí se všemi výhodami pro zaměstnance a studenty univerzity. Ale jako všechny ostatní služby je i tato placená, ovšem není jisté jestli ji poskytují pro všechny univerzity a ani za jakých podmínek.
 
 \subsection{BlueLaTeX}
-Open-source služba\footnote{http://www.bluelatex.org/} pro kompilaci LateX souborů. Kompilovat můžete na jejich serveru nebo nabízejí kód pro spuštění na vlastním. Kromě samotné serverové implementace je k dispozici i webový klient. Vše je pouze zatím v Beta verzi a samotní tvůrci varují před možnými nedostatky a problémy. Hlavním lákadlem je souběžná spolupráce více lidí na jednom dokumentu a také možnost provozovat server lokálně. 
+Open-source služba\footnote{http://www.bluelatex.org/} pro kompilaci LateX souborů. Kompilovat můžete na jejich serveru nebo nabízejí kód pro spuštění na vlastním. Kromě samotné serverové implementace je k dispozici i webový klient. Vše je pouze zatím v Beta verzi a samotní tvůrci varují před možnými nedostatky a problémy. Na jejich oficiálních stránkách je poslední aktivita z roku 2015 a zdá se, že tento projekt už není aktivní. Hlavním lákadlem je souběžná spolupráce více lidí na jednom dokumentu a také možnost provozovat server lokálně. 
 
 \subsection{ScienceSoft}
-Starší služba\footnote{http://sciencesoft.at/latex/index?lang=en}, která mimo kompilace \LaTeX\ souborů vložených přímo na stránky poskytuje i jiné rozhraní pro posílání souborů a to skrz REST Api a SOAP. Jak bylo řečeno, tak tato služba je už starší tudíž pro kompilaci používá TexLive 2008.
+Starší služba\footnote{http://sciencesoft.at/latex/index?lang=en}, která mimo kompilace \LaTeX\ souborů vložených přes webový prohlížeč poskytuje i jiné rozhraní pro poskytnutí souborů a to jmenovitě REST Api a SOAP. Jak bylo řečeno, tak tato služba je starší, tudíž pro kompilaci používá zastaralý TexLive 2008 a její vývoj není aktivní.
 
 \subsection{ShareLaTeX}
-Velmi podobný BlueLaTeXu, tedy open-source\footnote{https://github.com/sharelatex/clsi-sharelatex} nabízející jimi hostovanou verzi nebo lokální verzi pro vlastní potřebu, obě verze obsahují mnoho funkcí včetně grafického prostředí pro uživatele. Pod jménem ShareLaTeX se vyskytuje jenom výše zmíněné, ovšem společně s OverLeaf také spravují službu Pro\footnote{https://www.overleaf.com/for/enterprises}, která je určená pro firmy, ale i univerzity. Ta se pyšní možností nasazení na vlastních serverech, správou uživatelů, podporou a zabezpečením.
+Velmi podobný BlueLaTeXu, tedy open-source\footnote{https://github.com/sharelatex/clsi-sharelatex} nabízející jimi hostovanou verzi nebo lokální verzi pro vlastní potřebu, obě verze obsahují mnoho funkcí včetně grafického prostředí pro uživatele. Pod jménem ShareLaTeX se vyskytuje jenom výše zmíněné, ovšem společně s OverLeaf také spravují službu Pro\footnote{https://www.overleaf.com/for/enterprises}, která je určená pro firmy, ale i univerzity. Ta se pyšní možností nasazení na vlastních serverech, správou uživatelů, podporou a zabezpečením. 
 
 \subsection{Porovnání}
-Každé z těchto řešení ma své problémy, ať už že je zastaralé a neaktualizované nebo nesplňují zanalyzované požadavky(kapitola 3.1). Do první skupiny patří ScienceSoft a BlueLaTex, kde první z jmenovaných ani neposkytuje kód pro implementaci na lokálním serveru a druhý je v nedodělaném stavu, což může vést k nefunkčnosti a bezpečnostním rizikům. Služba Overleaf Commons nesplňuje stejný požadavek jako řešení od ScienceSoft, ale nabízí zajímavé prostředí pro vytváření a správu \LaTeX\ dokumentů pro studenty i zaměstnance, o čemž by univerzita mohla popřemýšlet. Nejnadějnější možností se zdá být ShareLaTeX, který poskytuje k použití i jenom backendovou část pro kompilaci \LaTeX\ a komunikaci, ale celý je implementovaný v CoffeeScriptu, což si rozporuje s požadavkem na implementaci, kde je Java EE. 
+Každé z těchto řešení ma své problémy, ať už že je zastaralé a neaktualizované nebo nesplňující zanalyzované požadavky(sekce \ref{requirements}). Do první skupiny patří ScienceSoft a BlueLaTex, kde první z jmenovaných ani neposkytuje kód pro implementaci na lokálním serveru a druhý je v nedodělaném stavu, což může vést k nefunkčnosti a bezpečnostním rizikům. Služba Overleaf Commons nesplňuje stejný požadavek jako řešení od ScienceSoft, ale nabízí zajímavé prostředí pro vytváření a správu \LaTeX\ dokumentů pro studenty i zaměstnance, o čemž by univerzita mohla popřemýšlet. Nejnadějnější možností se zdá být ShareLaTeX, který poskytuje k použití i jenom backendovou část pro kompilaci \LaTeX\ a komunikaci, ale celý je implementovaný v CoffeeScriptu, což si rozporuje s požadavkem na implementaci, kde je Java EE. 
 
 \section{Kompilátory}
-Nejdůležitější částí celé aplikace bude kompilátor, který bude provádět kompilaci \LaTeX\ souborů, ale může poskytnout i podporu pro operace s výsledným PDF. Tyto operace vycházejí ze stanovených funkčních požadavků(kapitola 3.1.1). Jelikož kompilace bude probíhat na serveru s Linuxovým operačním systémem.
+Nejdůležitější částí celé aplikace bude kompilátor, který bude provádět kompilaci \LaTeX\ souborů, ale může poskytnout i podporu pro operace s výsledným PDF. Tyto operace vycházejí ze stanovených funkčních požadavků(sekce \ref{functional}). Jelikož kompilace bude probíhat na serveru s Linuxovým operačním systémem nebudeme zahrnovat do srovnání kompilátory pro Windows.
 
 \subsection{MikTeX}
-MikTeX \footnote{https://miktex.org/kb/just-enough-tex} je velmi oblíbený hlavně na operačním systému Windows, díky příjemné instalaci a kvůli možnosti doinstalovávat balíčky "on-the-fly", neboli za běhu. Ale je poskytován i mimo jiné pro Linux a to například pro potřeby této práce v zajímavé verzi “Just enough TeX”. Tato instalace obsahuje jen to nejnutnější, tedy bez zbytečných balíčků navíc. Je vyvíjen jediným programátorem, který se stará o celou distribuci, což je do budoucnosti lehce rizikové z pohledu udržitelnosti. Podporované Linuxové operační systémy jsou např. Ubuntu 16.04, Ubuntu 18.04 a Debian 9.
+MikTeX \footnote{https://miktex.org} je velmi oblíbený hlavně na operačním systému Windows, díky příjemné instalaci a kvůli možnosti doinstalovávat balíčky \enquote{on-the-fly}, neboli za běhu. Ale je poskytován i mimo jiné pro Linux a to například pro potřeby této práce v zajímavé verzi \enquote{Just enough TeX}. Tato instalace obsahuje jen to nejnutnější, tedy bez zbytečných balíčků navíc. Je vyvíjen jediným programátorem, který se stará o celou distribuci, což je do budoucnosti lehce rizikové z pohledu udržitelnosti. Podporované Linuxové operační systémy jsou např. nejnovější Ubuntu a Debian.
 
 \subsection{TeXLive}
-Existují dvě různé cesty jak TeXLive\footnote{https://www.tug.org/texlive/pkginstall.html} nainstalovat a od toho se odvíjí správa balíčků. Verze Native TeX Live a distribuce přímo pro daný operační systém. Liší se ve počtu balíčků po instalaci a způsobu jejich aktualizací. V Native verzi probíhají aktualizace pomocí TeX Live Manager nebo-li tlmgr, jinak se o to stará samotný operační systém. Pokud si vyberete Native je možno si i zvolit schéma, které určuje množství balíčků např. scheme-basic obsahuje jenom to nejnutnější. 
+TeXLive je kompilátor spravovaný skupinou přispěvatelů, kteří ho udržují. Existují dvě různé cesty jak TeXLive\footnote{https://www.tug.org/texlive/pkginstall.html} nainstalovat a od toho se odvíjí správa balíčků. Verze Native TeX Live a distribuce přímo pro daný operační systém. Liší se ve počtu balíčků po instalaci a způsobu jejich aktualizací. V Native verzi probíhají aktualizace pomocí TeX Live Manager nebo-li tlmgr, jinak se o to stará samotný operační systém. Pokud si vyberete Native je možno si i zvolit schéma, které určuje množství balíčků např. scheme-basic obsahuje jenom to nejnutnější. Podporuje skoro všechny Linuxové distribuce.
 
-\subsection{Porovnání}
-Oba kompilátory jsou si velmi podobné a liší se jenom v drobnostech, některé už byly nastíněny v jejich popisech. Jedním z důležitých aspektů je velikost instalace, tedy i s balíčky, v této kategorii nabízejí oba to samé. K tomuto se váže práce s balíčky, kde už je jiná situace a to kvůli jasné výhodě MikTexu stahovat balíčky během běhu. Něco podobného jde dosáhnout i TexLive, ale je nutno použít externí skripty, což může mnohem více ovlivňovat rychlost kompilace. 
+\subsection{Porovnání} \label{compilator}
+Oba kompilátory jsou si velmi podobné a liší se jenom v drobnostech, některé z nich už byly nastíněny v jejich popisech. Jedním z důležitých aspektů je velikost instalace, tedy i s balíčky, v této kategorii nabízejí oba to samé. K tomuto se váže práce s balíčky, kde už je jiná situace a to kvůli jasné výhodě MikTeXu stahovat balíčky během běhu. Něco podobného jde dosáhnout i v TexLive, ale je nutno použít externí skripty, což může mnohem více ovlivňovat rychlost kompilace. 
+Rozdíl je také ve správě samotných kompilátorů, kde MikTeX je náchylnější k výpadkům aktualizací nebo celkově zastavení vývoje, kvůli jedinému člověku, který se o něj stará. To může vést i k dalším problémům, co se týče bezpečnosti a podpory.
