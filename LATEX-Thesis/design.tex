@@ -1,10 +1,10 @@
 \chapter{Vlastní řešení}  
 
-V této části navrhneme podobu vlastního řešení problému specifikovaného v předchozích kapitolách. 
+V této části navrhneme podobu vlastního řešení problému specifikovaného v předchozích kapitolách. Návrh měl by nabízet jednoduché a vyhovující řešení vycházející ze stanovených požadavků a cílů. 
 
 \section{Návrh}
 
-Tato práce se zaobírá webovou službou, která bude poskytovat svoje rozhraní a funkcionalitu portálům Moodle a CourseWare. Jedná se o jednoduchou aplikaci s jediným účelem, tedy kompilace \LaTeX\ souborů do PDF. Tudíž není potřeba ani persistentní vrstvy, výsledný soubor PDF bude uložen do klasického souborového systému. 
+Tato práce se zaobírá webovou službou, která bude poskytovat svoje rozhraní a funkcionalitu portálům Moodle a CourseWare. Jedná se o jednoduchou aplikaci s jediným účelem, tedy kompilace \LaTeX\ souborů do PDF. Tudíž není potřeba složité databáze, výsledný soubor PDF bude uložen do klasického souborového systému. 
 
 \subsection{Platforma}
 Na základě požadavků bude aplikace postavena na Java EE, což je platforma pro vývoj webových aplikací, rozšiřující standardní Javu SE. O proti ní poskytuje některé zásadní techniky navíc, jednu se tedy představme. 
@@ -24,23 +24,36 @@ Pro komunikaci mezi klientem a serverem je vybráno REST Api. Poskytuje jednoduc
 	\label{fig:seq}
 \end{figure}
 
-Kompletní dokumentace k rozhraní se nachází na swaggeru\footnote{https://app.swaggerhub.com/apis/Tadky/Thesis/1}. Na ukázku vypíšeme alespoň používané zdroje:
+Kompletní dokumentace k rozhraní se nachází na swagger\footnote{https://app.swaggerhub.com/apis/Tadky/Thesis/1}. Na ukázku vypíšeme alespoň používané zdroje:
 \begin{itemize}
-	\item \textbf{POST} {\ttfamily /job?token=<clientToken>} - Slouží k předání požadavků na výsledné PDF.
-	\item \textbf{POST} {\ttfamily /job/archive?id=<jobId>\&token=<clientToken>} - Musí obsahovat zip archiv s potřebnými soubory pro kompilaci.
-	\item \textbf{GET} {\ttfamily /job/pdf?id=<jobId>\&token=<clientToken>} - Vrací výsledné PDF, pokud už je hotové.
+	\item \textbf{POST} {\ttfamily /job} - Slouží k předání požadavků na výsledné PDF.
+	\item \textbf{POST} {\ttfamily /job/archive?id=<jobId>} - Musí obsahovat zip archiv s potřebnými soubory pro kompilaci.
+	\item \textbf{GET} {\ttfamily /job/pdf?id=<jobId>} - Vrací výsledné PDF, pokud už je hotové.
 \end{itemize}
 
-Autentizace bude probíhat skrz tokeny, které budou mít dané portály vygenerované a budou se nimi ověřovat.
+\subsection{Zabezpečení}
+Autentizace bude probíhat skrze tokeny, které budou mít dané portály přiřazené. Ty budou vygenerovány ručně a budou předány správcům portálů. Token bude obsahovat každá zpráva poslaná na server, ten se bude ověřovat oproti tokenu uloženém v properties\footnote{Soubor v němž jsou data uspořádány klíč = hodnota} souboru.
 
 \subsection{Kompilace}
-Pro vytvoření PDF je potřeba příslušně zkompilovat celý \LaTeX\ projekt 
-Na základě porovnání kompilátorů(3.3) z předchozí kapitoly je zvolen MikTeX, který poskytuje vše potřebné a nabízí vhodné funkcionality pro téma této práce např. doinstalovávání balíčku za běhu. 
+Pro vytvoření PDF je nutné příslušně zkompilovat celý \LaTeX\ projekt. Pro úspěšnou kompilaci je potřeba, aby kompilátor měl k dispozici všechny balíčky, které jsou použity v projektu. Jsou tři způsoby jak toho docílit.
+\begin{enumerate}
+	\item Stáhnout všechny balíčky již při instalaci kompilátoru
+	\item Nainstalovat čistý kompilátor
+		\begin{enumerate}
+			\item Stáhnout několik balíčků a jenom ty se budou používat
+			\item Získávat balíčky podle potřeby za běhu
+		\end{enumerate}
+\end{enumerate}
+První možnost je zbytečná z důvodu mnoha nepoužívaných balíčků a velikosti na disku. Druhá možnost nabízí dvě podmožnosti, kde volba s přednastavenými balíčky vytváří omezení pro uživatele a tím pádem je může odrazovat od používání. Nejvíce vhodná se zdá poslední možnost, která eliminuje všechny neduhy předchozích, tím pádem je i zvolena.
+\par
+Na základě porovnání kompilátorů(sekce \ref{compilator}) z předchozí kapitoly je zvolen MikTeX, který poskytuje vše potřebné a nabízí vhodné funkcionality pro téma této práce např. doinstalovávání balíčku za běhu. Bude nainstalován ve verzi \enquote{Just enough TeX}, tudíž nebude obsahovat žádné balíčky. Ty se právě budou doinstalovávat až na požadavek při kompilaci.
 
-Jelikož jsou kladeny požadavky na výsledný soubor PDF a bohužel kompilátory tyto úpravy nepodporují je potřeba použít jiný nástroj, který bude umožňovat měnit soubor podle požadavků. Nejvíce vhodný se zdá PDFtk\footnote{https://www.pdflabs.com/tools/pdftk-server/}, který je pod GPL licencí a nabízí vše potřebné. 
+\subsection{PDF úpravy}
+Jelikož jsou kladeny požadavky na výsledný soubor PDF a bohužel kompilátory tyto úpravy nepodporují je potřeba použít jiný nástroj, který bude umožňovat měnit soubor podle požadavků. Nejvíce vhodný se zdá PDFtk\footnote{https://www.pdflabs.com/tools/pdftk-server/}, který je pod GPL licencí a nabízí vše potřebné. Tedy po zkompilování do PDF, se za pomoci výše zmíněné aplikace aplikují požadavky, které byly obdrženy od klienta.
 
 \subsection{Server}
-
+V této fázi návrhu máme už všechny potřebné informace, aby mohl být zvolen operační systém a stanoveny požadavky na server. Jsou známy dvě omezující podmínky na systém, první vychází z požadavků, OS musí být Debain nebo CentOS. Druhý určuje kompilátor, jelikož byl zvolen MikTeX, který je podporován na Debian a Ubutnu, je jednoznačně zvolen vítěz. Na základě průniku je vybrán nejnovější Debian, tedy verze 9 s označením \enquote{stretch}. 
+ 
 
 
 
