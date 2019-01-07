@@ -1,0 +1,10 @@
+\chapter{Závěr}
+
+Cíle, které byly stanoveny v úvodu, byly dosaženy. Po seznámení s technologiemi a torií relevantními k tématu této práce, proběhla analýza. V té byly určeny požadavky vyplývající z potřeb a omezení stanovených zadávajícím či prostředím, dále byly také zanalyzovány existující řešní téhož problému a proběhlo porovnání kompilátorů. Na analýzu je navázáno návrhem vlastního řešení, v této části je popsáno jaké komponenty bude aplikace obsahovat a jak bude fungovat. 
+\par
+Platformou pro implementaci bude Java EE s aplikačním serverem Payara. Byl navrhnut způsob komunikace a komunikační protokol mezi službou a klienty pomocí REST Api, včetně autentizace klientů, která bude prováděna na základě tokenů. Nejdůležitější částí aplikace bude \LaTeX\ kompilátor, přičemž ním byl zvolen MikTeX. Jeden z hlavních důvodu je možnost stahovat balíčky za běhu, které se bude využívat. Výsledné PDF soubory se budou uchovávat na serveru po dobu jednoho měsíce v chráněném souborovém systému. 
+\par
+Na základě zvoleného kompilátoru a požadavků byl vybrán operační systém Debian 9, který musí být přítomen na serveru pro správné fungování aplikace. Aby služba mohla vyhovět všem požadavkům a provozu je požadováno 15GB volného místa na disku pro instalaci, balíčky a uchovávání výsledných PDF.
+\par
+Na tento semestrální projekt bude mavázáno implementací, kde se bude vycházet ze zde dosažených závěru a výstupů.
+ 

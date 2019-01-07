@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.17)  6 JAN 2019 11:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.31)  7 JAN 2019 15:39
 entering extended mode
 **./bp-thesis.tex
 (bp-thesis.tex
@@ -6,11 +6,11 @@ LaTeX2e <2018-04-01> patch level 5
 (ctuthesis.cls
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
 "
-Package: expl3 2018-10-31 L3 programming layer (loader) 
+Package: expl3 2018-10-19 L3 programming layer (loader) 
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3-cod
 e.tex"
-Package: expl3 2018-10-31 L3 programming layer (code)
+Package: expl3 2018-10-19 L3 programming layer (code)
 \c_max_int=\count80
 \l_tmpa_int=\count81
 \l_tmpb_int=\count82
@@ -158,7 +158,7 @@ Package: expl3 2018-10-31 L3 programming layer (code)
 )
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode
 .def"
-File: l3pdfmode.def 2018-10-31 v L3 Experimental driver: PDF mode
+File: l3pdfmode.def 2018-10-19 v L3 Experimental driver: PDF mode
 \l__driver_color_stack_int=\count164
 ))
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\l3keys2
@@ -299,25 +299,61 @@ Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \TX@delta=\dimen155
 \TX@cols=\count191
 \TX@ftn=\toks20
-) ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
+)
+("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tablefootnote\tabl
+efootnote.sty"
+Package: tablefootnote 2014/01/26 v1.1c Table foot notes (HMM)
+
+("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds
+.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\letltxmac
+ro.sty"
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+)
+("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xifthen\xifthen.st
+y"
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+ ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count192
+\calc@Bcount=\count193
+\calc@Adimen=\dimen156
+\calc@Bdimen=\dimen157
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count194
+\calc@Cskip=\skip56
+) ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifmtarg\ifmtarg.st
+y"
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+)))
+("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
- ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everysel.sty"
+
+("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everysel.sty"
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\CenteringLeftskip=\skip54
-\RaggedLeftLeftskip=\skip55
-\RaggedRightLeftskip=\skip56
-\CenteringRightskip=\skip57
-\RaggedLeftRightskip=\skip58
-\RaggedRightRightskip=\skip59
-\CenteringParfillskip=\skip60
-\RaggedLeftParfillskip=\skip61
-\RaggedRightParfillskip=\skip62
-\JustifyingParfillskip=\skip63
-\CenteringParindent=\skip64
-\RaggedLeftParindent=\skip65
-\RaggedRightParindent=\skip66
-\JustifyingParindent=\skip67
+\CenteringLeftskip=\skip57
+\RaggedLeftLeftskip=\skip58
+\RaggedRightLeftskip=\skip59
+\CenteringRightskip=\skip60
+\RaggedLeftRightskip=\skip61
+\RaggedRightRightskip=\skip62
+\CenteringParfillskip=\skip63
+\RaggedLeftParfillskip=\skip64
+\RaggedRightParfillskip=\skip65
+\JustifyingParfillskip=\skip66
+\CenteringParindent=\skip67
+\RaggedLeftParindent=\skip68
+\RaggedRightParindent=\skip69
+\JustifyingParindent=\skip70
 ) (ctuth-pkg.tex
 File: ctuth-pkg.tex 2016/06/15 v0.1t1606152353 "Packages" part of the class ctu
 thesis
@@ -368,11 +404,11 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 e.sty"
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks21
-\MT@count=\count192
+\MT@count=\count195
 LaTeX Info: Redefining \textls on input line 793.
-\MT@outer@kern=\dimen156
+\MT@outer@kern=\dimen158
 LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
-\MT@listname@count=\count193
+\MT@listname@count=\count196
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\microtype\microtyp
 e-pdftex.def"
@@ -380,7 +416,7 @@ File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 913.
 LaTeX Info: Redefining \lslig on input line 913.
-\MT@outer@space=\skip68
+\MT@outer@space=\skip71
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -409,29 +445,13 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 x.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen157
-\Gin@req@width=\dimen158
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
 )
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.
 sty"
 Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
 
-("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count194
-\calc@Bcount=\count195
-\calc@Adimen=\dimen159
-\calc@Bdimen=\dimen160
-\calc@Askip=\skip69
-\calc@Bskip=\skip70
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count196
-\calc@Cskip=\skip71
-)
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.st
 y"
 Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
@@ -443,10 +463,6 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infware
 rr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds
-.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
 ty"
@@ -851,7 +867,7 @@ Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package hobsub Info: Skipping package `letltxmacro' (already loaded).
 Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
 Package: xcolor-patch 2016/05/16 xcolor patch
 Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
@@ -956,27 +972,27 @@ LaTeX Warning: Label `tab:errors' multiply defined.
 )
 \openout1 = `bp-thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 68.
  ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 67.
-LaTeX Info: Redefining \microtypecontext on input line 67.
+LaTeX Info: Redefining \selectfont on input line 68.
+LaTeX Info: Redefining \microtypecontext on input line 68.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1071,7 +1087,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 67.
+Package hyperref Info: Link coloring OFF on input line 68.
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
 ty"
@@ -1083,9 +1099,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count310
 )
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
-LaTeX Info: Redefining \nameref on input line 67.
+LaTeX Info: Redefining \ref on input line 68.
+LaTeX Info: Redefining \pageref on input line 68.
+LaTeX Info: Redefining \nameref on input line 68.
  (bp-thesis.out) (bp-thesis.out)
 \@outlinefile=\write4
 \openout4 = `bp-thesis.out'.
@@ -1094,35 +1110,35 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 68.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 69.
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 68.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 69.
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 68.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 69.
 
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 68.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 69.
 
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 68.
+(Font)              <10.95> on input line 69.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 68.
+(Font)              <8> on input line 69.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 68.
-LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+(Font)              <6> on input line 69.
+LaTeX Font Info:    Try loading font information for U+msa on input line 69.
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1131,7 +1147,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 fg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+LaTeX Font Info:    Try loading font information for U+msb on input line 69.
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1140,19 +1156,19 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 fg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<ctu_logo_black.pdf, id=83, 126.78566pt x 96.54268pt>
+<ctu_logo_black.pdf, id=79, 126.78566pt x 96.54268pt>
 File: ctu_logo_black.pdf Graphic file (type pdf)
 <use ctu_logo_black.pdf>
-Package pdftex.def Info: ctu_logo_black.pdf  used on input line 68.
+Package pdftex.def Info: ctu_logo_black.pdf  used on input line 69.
 (pdftex.def)             Requested size: 85.89001pt x 65.40001pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 68.
+(Font)              <14.4> on input line 69.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 68.
+(Font)              <10> on input line 69.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 68.
+(Font)              <7> on input line 69.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 68--68
+Overfull \hbox (5.0pt too wide) in paragraph at lines 69--69
 []|| [][][] 
  []
 
@@ -1162,7 +1178,7 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 68--68
 
 {C:/Users/Tadky/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./ctu_logo_
 black.pdf>]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 68.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 69.
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1281,7 +1297,7 @@ Kapitola 2.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 32.
  [3]
-<Untitled.png, id=167, 152.06813pt x 250.68657pt>
+<Untitled.png, id=163, 152.06813pt x 250.68657pt>
 File: Untitled.png Graphic file (type png)
 <use Untitled.png>
 Package pdftex.def Info: Untitled.png  used on input line 34.
@@ -1296,23 +1312,23 @@ Overfull \hbox (14.77702pt too wide) in paragraph at lines 65--66
 
 [5]) (analysis.tex [6]
 Kapitola 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 64.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 64.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7
 
 ]
+[8]
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 75.
+(hyperref)                removing `\textasciicaron' on input line 76.
 
-[8]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 79.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 79.
- [9]) [10] (design.tex [11]
+[9] [10]) (design.tex [11]
 Kapitola 4.
 
 Package hyperref Warning: Composite letter `\textasciicaron+r'
@@ -1324,28 +1340,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
 
-<diagram.png, id=240, 557.83406pt x 639.89063pt>
+<diagram.png, id=238, 557.83406pt x 639.89063pt>
 File: diagram.png Graphic file (type png)
 <use diagram.png>
 Package pdftex.def Info: diagram.png  used on input line 21.
 (pdftex.def)             Requested size: 366.29752pt x 420.19081pt.
 [12
 
-]
-Underfull \vbox (badness 2460) has occurred while \output is active []
-
- [13 <./diagram.png>]) [14]
+] [13 <./diagram.png>] [14]) (final.tex [15]
 Kapitola 5.
-[15
-
-]
-Kapitola 6.
 
 Package hyperref Warning: Composite letter `\textasciicaron+e'
 (hyperref)                not defined in PD1 encoding,
-(hyperref)                removing `\textasciicaron' on input line 80.
+(hyperref)                removing `\textasciicaron' on input line 1.
 
-(bp-thesis.bbl [16
+) (bp-thesis.bbl [16
 
 ]
 Package microtype Info: Character `029' is missing
@@ -1379,26 +1388,26 @@ Package ctuthesis Warning: The macro \appendix should be used only once.
 ]
 P\v {r}\'{\i }loha C.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
  [20
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
  (bp-thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
 Package rerunfilecheck Info: File `bp-thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FC3253AAB2E752EDF717401AC18BB1F7;1093.
+(rerunfilecheck)             Checksum: 933ECD23FC8C60FA13DFAC0D26BD6AA0;1044.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 23040 strings out of 492970
- 403377 string characters out of 3126593
- 542325 words of memory out of 3000000
- 26360 multiletter control sequences out of 15000+200000
+ 23134 strings out of 492970
+ 405145 string characters out of 3126593
+ 546129 words of memory out of 3000000
+ 26435 multiletter control sequences out of 15000+200000
  635897 words of font info for 148 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,17n,63p,954b,847s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1416,9 +1425,9 @@ ams/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/Tadky/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Tadky/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Tadky/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
-Output written on bp-thesis.pdf (26 pages, 408036 bytes).
+Output written on bp-thesis.pdf (26 pages, 411297 bytes).
 PDF statistics:
- 368 PDF objects out of 1000 (max. 8388607)
- 91 named destinations out of 1000 (max. 500000)
- 32432 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 366 PDF objects out of 1000 (max. 8388607)
+ 92 named destinations out of 1000 (max. 500000)
+ 32424 words of extra memory for PDF output out of 35830 (max. 10000000)
 

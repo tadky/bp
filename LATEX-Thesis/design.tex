@@ -1,10 +1,10 @@
 \chapter{Vlastní řešení}  
 
-V této části navrhneme podobu vlastního řešení problému specifikovaného v předchozích kapitolách. Návrh měl by nabízet jednoduché a vyhovující řešení vycházející ze stanovených požadavků a cílů. 
+V této části navrhneme podobu vlastního řešení problému specifikovaného v předchozích kapitolách. Návrh by měl nabízet jednoduché a vyhovující řešení vycházející ze stanovených požadavků a cílů. 
 
 \section{Návrh}
 
-Tato práce se zaobírá webovou službou, která bude poskytovat svoje rozhraní a funkcionalitu portálům Moodle a CourseWare. Jedná se o jednoduchou aplikaci s jediným účelem, tedy kompilace \LaTeX\ souborů do PDF. Tudíž není potřeba složité databáze, výsledný soubor PDF bude uložen do klasického souborového systému. 
+Cílem práce je poskytnout konverzi \LaTeX\ souborů do PDF, čehož bude dosaženo pomocí webové služby. Tato služba bude poskytovat svoje rozhraní a funkcionalitu portálům Moodle a CourseWare. Jedná se o jednoduchou aplikaci s jediným účelem, tedy kompilace \LaTeX\ souborů do PDF. Tudíž není potřeba složité databáze, výsledný soubor PDF bude uložen do klasického souborového systému. 
 
 \subsection{Platforma}
 Na základě požadavků bude aplikace postavena na Java EE, což je platforma pro vývoj webových aplikací, rozšiřující standardní Javu SE. O proti ní poskytuje některé zásadní techniky navíc, jednu se tedy představme. 
@@ -53,6 +53,8 @@ Jelikož jsou kladeny požadavky na výsledný soubor PDF a bohužel kompilátor
 
 \subsection{Server}
 V této fázi návrhu máme už všechny potřebné informace, aby mohl být zvolen operační systém a stanoveny požadavky na server. Jsou známy dvě omezující podmínky na systém, první vychází z požadavků, OS musí být Debain nebo CentOS. Druhý určuje kompilátor, jelikož byl zvolen MikTeX, který je podporován na Debian a Ubutnu, je jednoznačně zvolen vítěz. Na základě průniku je vybrán nejnovější Debian, tedy verze 9 s označením \enquote{stretch}. 
+\par
+Je také potřeba stanovit velikost diksové prostoru potřebného pro fungování. Jelikož nejvíce bude zabírat místo balíčky a potažmo výsledné pdf, budeme vycházet hlavně z těchto údajů. Přibližná velikost všech balíčků obsažených v plné verzi kompilátoru je zhruba 3GB. Dále je potřeba odhadnout velikost všech PDF, které musí server uchovávat po dobu jednoho měsíce, v jeden moment. Horní odhad pro počet vytvořených PDF za den je 30 a pro velikost souboru je 10MB. Tedy na konci měsíce se může očekávat velikost cca 10GB. Tedy celkové požadované místo je 15GB.  
  
 
 

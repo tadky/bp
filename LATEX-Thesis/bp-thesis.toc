@@ -21,6 +21,7 @@
 \babel@toc {czech}{}
 \contentsline {chapter}{\numberline {1}\IeC {\'U}vod}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}C\IeC {\'\i }le pr\IeC {\'a}ce}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Projekt}{1}{subsection.1.1.1}
 \contentsline {chapter}{\numberline {2}Teorie a technologie}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}REST}{2}{section.2.1}
 \contentsline {section}{\numberline {2.2}PDF}{3}{section.2.2}
@@ -35,11 +36,11 @@
 \contentsline {subsection}{\numberline {3.2.1}OverLeaf}{9}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}BlueLaTeX}{9}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}ScienceSoft}{9}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}ShareLaTeX}{9}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.4}ShareLaTeX}{10}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}Porovn\IeC {\'a}n\IeC {\'\i }}{10}{subsection.3.2.5}
 \contentsline {section}{\numberline {3.3}Kompil\IeC {\'a}tory}{10}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}MikTeX}{10}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}TeXLive}{10}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}TeXLive}{11}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Porovn\IeC {\'a}n\IeC {\'\i }}{11}{subsection.3.3.3}
 \contentsline {chapter}{\numberline {4}Vlastn\IeC {\'\i } \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{12}{chapter.4}
 \contentsline {section}{\numberline {4.1}N\IeC {\'a}vrh}{12}{section.4.1}
@@ -49,8 +50,7 @@
 \contentsline {subsection}{\numberline {4.1.4}Kompilace}{14}{subsection.4.1.4}
 \contentsline {subsection}{\numberline {4.1.5}PDF \IeC {\'u}pravy}{14}{subsection.4.1.5}
 \contentsline {subsection}{\numberline {4.1.6}Server}{14}{subsection.4.1.6}
-\contentsline {chapter}{\numberline {5}Implementace}{15}{chapter.5}
-\contentsline {chapter}{\numberline {6}Z\IeC {\'a}v\IeC {\v e}r}{16}{chapter.6}
+\contentsline {chapter}{\numberline {5}Z\IeC {\'a}v\IeC {\v e}r}{16}{chapter.5}
 \contentsline {chapter}{Literatura}{17}{chapter*.5}
 \contentsline {chapter}{\numberline {A}Seznam zdroj\IeC {\r u}}{18}{appendix.A}
 \contentsline {chapter}{\numberline {B}Seznam zkratek}{19}{appendix.B}
