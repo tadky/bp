@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.31)  7 JAN 2019 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.17)  7 JAN 2019 20:38
 entering extended mode
 **./bp-thesis.tex
 (bp-thesis.tex
@@ -6,11 +6,11 @@ LaTeX2e <2018-04-01> patch level 5
 (ctuthesis.cls
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty
 "
-Package: expl3 2018-10-19 L3 programming layer (loader) 
+Package: expl3 2018-10-31 L3 programming layer (loader) 
 
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\expl3-cod
 e.tex"
-Package: expl3 2018-10-19 L3 programming layer (code)
+Package: expl3 2018-10-31 L3 programming layer (code)
 \c_max_int=\count80
 \l_tmpa_int=\count81
 \l_tmpb_int=\count82
@@ -158,7 +158,7 @@ Package: expl3 2018-10-19 L3 programming layer (code)
 )
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3kernel\l3pdfmode
 .def"
-File: l3pdfmode.def 2018-10-19 v L3 Experimental driver: PDF mode
+File: l3pdfmode.def 2018-10-31 v L3 Experimental driver: PDF mode
 \l__driver_color_stack_int=\count164
 ))
 ("C:\Users\Tadky\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3packages\l3keys2
@@ -1297,7 +1297,7 @@ Kapitola 2.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 32.
  [3]
-<Untitled.png, id=163, 152.06813pt x 250.68657pt>
+<Untitled.png, id=162, 152.06813pt x 250.68657pt>
 File: Untitled.png Graphic file (type png)
 <use Untitled.png>
 Package pdftex.def Info: Untitled.png  used on input line 34.
@@ -1340,7 +1340,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--14
 
  []
 
-<diagram.png, id=238, 557.83406pt x 639.89063pt>
+<diagram.png, id=237, 557.83406pt x 639.89063pt>
 File: diagram.png Graphic file (type png)
 <use diagram.png>
 Package pdftex.def Info: diagram.png  used on input line 21.
@@ -1404,10 +1404,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 23134 strings out of 492970
- 405145 string characters out of 3126593
- 546129 words of memory out of 3000000
- 26435 multiletter control sequences out of 15000+200000
+ 23137 strings out of 492970
+ 405459 string characters out of 3126593
+ 546149 words of memory out of 3000000
+ 26439 multiletter control sequences out of 15000+200000
  635897 words of font info for 148 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,17n,63p,954b,847s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1425,9 +1425,9 @@ ams/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/Tadky/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Tadky/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Tadky/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
-Output written on bp-thesis.pdf (26 pages, 411297 bytes).
+Output written on bp-thesis.pdf (26 pages, 410930 bytes).
 PDF statistics:
- 366 PDF objects out of 1000 (max. 8388607)
- 92 named destinations out of 1000 (max. 500000)
+ 365 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
  32424 words of extra memory for PDF output out of 35830 (max. 10000000)
 
