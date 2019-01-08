@@ -1,6 +1,10 @@
 \chapter{Závěr}
 
-Cíle, které byly stanoveny v úvodu, byly dosaženy. Po seznámení s technologiemi a torií relevantními k tématu této práce, proběhla analýza. V té byly určeny požadavky vyplývající z potřeb a omezení stanovených zadávajícím či prostředím, dále byly také zanalyzovány existující řešní téhož problému a proběhlo porovnání kompilátorů. Na analýzu je navázáno návrhem vlastního řešení, v této části je popsáno jaké komponenty bude aplikace obsahovat a jak bude fungovat. 
+Cíle, které byly stanoveny v úvodu, byly dosaženy. Po seznámení s technologiemi a teorií relevantní pro téma této práce proběhla analýza. 
+\par
+V analýze byly pomocí metody FURPS+ určeny požadavky vyplývající z potřeb a omezení stanovených zadávajícím či prostředím. Dále byly zanalyzovány vybrané existující řešení téhož problému, ovšem žádné z nich nesplnilo všechny požadavky. Také došlo na analýzu a porovnání vybraných kompilátorů, ze které vzešlo, že výběr je malý a rozdíly mezi nimi minimální.  
+\par
+Na analýzu je navázáno návrhem vlastního řešení, v této části je popsáno, jaké komponenty bude aplikace obsahovat a jak bude fungovat. 
 \par
 Platformou pro implementaci bude Java EE s aplikačním serverem Payara. Byl navrhnut způsob komunikace a komunikační protokol mezi službou a klienty pomocí REST Api, včetně autentizace klientů, která bude prováděna na základě tokenů. Nejdůležitější částí aplikace bude \LaTeX\ kompilátor, přičemž ním byl zvolen MikTeX. Jeden z hlavních důvodu je možnost stahovat balíčky za běhu, které se bude využívat. Výsledné PDF soubory se budou uchovávat na serveru po dobu jednoho měsíce v chráněném souborovém systému. 
 \par
