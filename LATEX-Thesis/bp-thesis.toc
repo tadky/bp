@@ -55,4 +55,3 @@
 \contentsline {chapter}{Literatura}{18}{chapter*.5}
 \contentsline {chapter}{\numberline {A}Seznam zdroj\IeC {\r u}}{19}{appendix.A}
 \contentsline {chapter}{\numberline {B}Seznam zkratek}{20}{appendix.B}
-\contentsline {chapter}{\numberline {C}Testov\IeC {\'a}n\IeC {\'\i }}{21}{appendix.C}
