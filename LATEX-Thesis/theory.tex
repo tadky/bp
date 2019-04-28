@@ -42,9 +42,10 @@
 	
 	\LaTeX\ je rozšíření \TeX u o balíček přednastavených řídicích konstrukcí. Hlavní cílem těchto systémů je jednoduchost při psaní matematických a jiných vzorců. Ovšem je také velmi oblíben kvůli možnosti jednoduše upravovat dokumenty podle potřeby, přestože prvotní seznámení je ve srovnání s jínymi nástroji ke psaní náročnější.
 	
-	Základní soubory mají příponu tex kromě souboru s nastavením, ten je ve formátu cls, neboli class file. Tyto soubory mohou být uspořádány do stromové struktury, kde v kořenu stromu je jeden hlavní soubor, do kterého jsou vnořovány další, ale vše může být i v jednom. To napomáhá přehlednosti velkých dokumentů a také používání již vytvořených. 
+	Základní soubory mají příponu tex kromě souboru s nastavením, ten je ve formátu cls, neboli class file. Tyto soubory mohou být uspořádány do stromové struktury, kde v kořenu stromu je jeden hlavní soubor, do kterého jsou vnořovány další. To napomáhá přehlednosti velkých dokumentů a také používání již vytvořených. 
 	
 	Soubor se skládá z preambule, která obsahuje nastavení pro celý dokument a případně používané balíčky. Ve druhé části dokumentu se mimo jiné nacházejí kapitoly, sekce a podobně. Základní syntaxe může vypadat takto.
+	\newpage
 	\begin{verbatim}
 	\documentclass{thesis}
 	\usepackage{csquotes}
@@ -54,7 +55,7 @@
 	\end{document}
 	\end{verbatim}
 	
-	Výše zmíněné balíčky slouží k přidávání dalších před vytvořených řídících konstrukcí. Tyto balíčky jsou buď nainstalovány zároveň s instalací kompilátoru, nebo je možné je ručně doinstalovávat podle potřeby. 
+	Výše zmíněné balíčky slouží k přidávání dalších předvytvořených řídících konstrukcí. Tyto balíčky jsou buď nainstalovány zároveň s instalací kompilátoru, nebo je možné je ručně doinstalovávat podle potřeby. 
 	
 	Pro získání výsledného dokumentu, například ve formátu PDF, je potřeba vše zkompilovat. To provádí kompilátor.  
 
