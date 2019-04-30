@@ -1,2 +1,15 @@
- 
- \chapter{Implementace}
+\chapter{Implementace}
+Jak už bylo zmíněno v sekci architektura, aplikace nemá prezentační vrstvu a sestává se jenom z aplikačního serveru, který má na starosti komunikaci s klienty, byznys logiku a persistenci dat.
+
+\section{Ukládání dat}
+Data jsou ukládána několika způsoby za prvé se využívá databáze do které se ukládají požadavky klienta na výsledné PDF. Dále se použivájí již zmíněné properties soubory v kterých se nachází tokeny. A v neposlední řadě se všechny vygenerované PDF ukládají do klasického souborového systému. 
+
+VLOZIT OBR SLOZEK
+
+\subsection{SQLite} 
+Tato databáze staví na klasickém SQL jazyku a stejně jako všechny ostatní nejznámější databáze i tato je relačním. Ovšem narozdíl od ostatních nepotřebuje ke svému běhu server, pouze vytváří databáze v podobě souborů, ke kterým poskytuje rozhraní.
+
+
+\section{Kompilace a úprava PDF}
+
+\section{Zpracovávání požadavků}
