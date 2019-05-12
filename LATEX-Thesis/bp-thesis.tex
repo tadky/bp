@@ -7,7 +7,11 @@
 \usepackage{tablefootnote}
 \newcommand{\tabitem}{~~\llap{\,\begin{picture}(-1,1)(-1,-3)\circle*{3}\end{picture}\ }~~}
 \usepackage{array}
+\usepackage{listings}
+\usepackage{dirtree}
 \usepackage{ragged2e}
+\usepackage{lmodern}
+\renewcommand{\lstlistingname}{Ukázka kódu}
 \newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
 
 \ctusetup{
@@ -16,7 +20,7 @@
 	mainlanguage = czech,
 	titlelanguage = czech,
 	title-english = {Creation of REST service for conversion from LaTeX to PDF},
-	title-czech = {Vytvoření REST služby pro konverzi LaTeX souborů do PDF},
+	title-czech = {REST služba pro konverzi LaTeX souborů do PDF},
 	department-czech = {Katedra počítačů},
 	author = {TADEÁŠ KYRAL},
 	supervisor = {Ing. LUKÁŠ ZOUBEK},
@@ -55,18 +59,32 @@
 
 % Abstrakt v anglictine
 \begin{abstract-english}
-	Thesis consists of design of web service providing conversion of \LaTeX\ to PDF. This service will be available for users of Moodle and CourseWare. It helps them to create PDF inside of web browser instead of compiling it on their computer.
+	Thesis consists of design and implementation of web service providing conversion of \LaTeX\ to PDF. This service will be available for users of Moodle and CourseWare. It helps them to create PDF inside of web browser instead of compiling it on their computer.
 \end{abstract-english}
 
 
 % Abstrakt v cestine
 \begin{abstract-czech}
-	Práce pojednává o návrhu webové služby pro konverzi \LaTeX u do PDF pro uživatele v Moodle a CourseWare. Služba má uživatelům usnadnit práci s \LaTeX\ ovými soubory přímo skrze portál, bez potřeby stahování a kompilace na svém stroji. 
+	Práce pojednává o návrhu a implementaci webové služby pro konverzi \LaTeX u do PDF pro uživatele v Moodle a CourseWare. Služba má uživatelům usnadnit práci s \LaTeX\ ovými soubory přímo skrze portál, bez potřeby stahování a kompilace na svém stroji. 
 \end{abstract-czech}
 
 
 \begin{document}
 	\maketitle
+	\lstset{
+		backgroundcolor = \color{ctubluebg},
+		basicstyle = \fontfamily{lmtt}\selectfont\small,
+		columns = flexible,
+		captionpos=b,
+		keepspaces = true,
+		rulecolor = \color{ctubluebg},
+		frame=tlbr;
+		framexrightmargin = 2pt,
+		framesep=3pt,
+		xleftmargin = 4pt,
+		xrightmargin = 4pt,
+		language=Java
+	}
 
 	\input{introduction}
 
@@ -77,6 +95,8 @@
   	\input{design}  
   	
   	\input{implementation}
+  	
+  	\input{testing}
 
 	\input{final}
 	

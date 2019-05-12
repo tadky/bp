@@ -6,6 +6,12 @@ Document management - portable document format - part 1: Pdf 1.7.
   \url{https://www.adobe.com/content/dam/acom/en/devnet/pdf/PDF32000_2008.pdf},
   2008.
 
+\bibitem{javaee}
+The java ee 6 tutorial.
+\newblock
+  \url{https://docs.oracle.com/javaee/6/tutorial/doc/javaeetutorial6.pdf},
+  2013.
+
 \bibitem{furps}
 {\sc Dutoit, B. B. . A.~H.}
 \newblock {\em Object-Oriented Software Engineering Using UML, Patterns, and
@@ -19,6 +25,11 @@ Document management - portable document format - part 1: Pdf 1.7.
 \newblock PhD thesis, PhD Dissertation, University of California, Irvine, 2000.
 \newblock Online, Přístup 17.11.2018.
 
+\bibitem{arch}
+{\sc Fowler, M.}
+\newblock {\em Patterns of Enterprise Application Architecture}.
+\newblock 2011.
+
 \bibitem{rest}
 {\sc Hesam, Masne, S., Harry, and Rajan}.
 \newblock {REST API} {T}utorial.
@@ -29,5 +40,10 @@ Document management - portable document format - part 1: Pdf 1.7.
 {\sc Satrapa, P.}
 \newblock {\em LaTeX pro pragmatiky}.
 \newblock 2011.
+
+\bibitem{webService}
+{\sc W3C}.
+\newblock Web service architecture.
+\newblock \url{https://www.w3.org/TR/ws-arch/wsa.pdf}, 2004.
 
 \end{thebibliography}

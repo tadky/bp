@@ -5,16 +5,19 @@
   \section{REST}
 	Representational state transfer (dále jen REST) je architektura pro komunikaci  mezi distribuovanými systémy. Termín zavedl R. T. Fielding ve své disertační práci\cite{restThesis}, kde toto rozhraní bylo taktéž popsáno a vymezeno. Mimo jiné stanovil i těchto 5 základních pravidel, která by měla být dodržena, aby se aplikace nazývala RESTful\cite{rest}:
 	\begin{itemize}
-		\item Klient-Server (Client-Server) - Toto omezení staví na principu oddělení zodpovědností (Separation of Concerns), nebo-li je klientská část starající se o uživatelské rozhraní je oddělena od serverové části přistupující k databázi. Zlepšuje škálovatelnost sytému a zjednodušuje použitelnost na různých platformách.
+		\item Klient-Server (Client-Server) - Toto omezení staví na principu oddělení zodpovědností (Separation of Concerns), nebo-li existuje klientská část starající se o uživatelské rozhraní a ta je oddělena od serverové části přistupující k databázi. Zlepšuje škálovatelnost sytému a zjednodušuje použitelnost na různých platformách.
 		\item Bezestavovost (Stateless) - Každý požadavek musí přenášet všechna související data, server totiž neuchovává žádné informace o nynějším spojením a každý požadavek bere jako nový.
 		\item Keš (Cache) - Data přenášená v odpovědi mohou být označená jako kešovatelná, tudíž si je klient může uložit a kdykoliv použít znova.
-		\item Jednotné rozhraní (Unified interface) - Základem tohoto omezení je princip HATEOAS (Hypermedia As The Engine Of Application State), který říká, že klient nepotřebuje znát pravidla komunikace dopředu a data musí obsahovat odkazy na další data v aplikaci. Měla by být jasně definovaná adresa zdroje (např. URI), reprezentace přenášených dat (např. HTML), typ média (např. JSON)
+		\item Jednotné rozhraní (Unified interface) - Základem tohoto omezení je princip HATEOAS (Hypermedia As The Engine Of Application State), který říká, že klient nepotřebuje znát pravidla komunikace dopředu a data musí obsahovat odkazy na další data v aplikaci. Měla by být jasně definovaná adresa zdroje (např. URI), reprezentace přenášených dat (např. HTML) a typ média (např. JSON).
 		\item Vrstvený systém (Layered system) - Přidáním vrstev se aplikace, kde každá vrstva je izolovaná a může komunikovat jenom se sousedícími vrstvami, zpřehlední a zlepší se její škálovatelnost.
 	\end{itemize}	
 	Nejčastějším typem protokolu využívající tuto architekturu je Hypertext Transfer Protocol(HTTP). Pomocí čtyř hlavních metod GET, PUT, POST, DELETE v požadavku poslaném z klienta server buď vrátí požadovaná data, přijme data poslaná v těle a uloží do databáze, nebo data vymaže. 
 
-\section{PDF}
-	Portable Document Format (dále jen PDF), jak už název napovídá, představuje o formát dokumentů, jejichž hlavním cílem je poskytování nezávislosti na platformě. Je velmi podobný programovacímu jazyku PostScript, ze kterého vzešel. Syntaxe souboru je nejlépe pochopitelná jako čtyři komponenty\cite{pdf}: 
+\section{Webová služba}
+ Webová služba\cite{webService} představuje systém, který byl navrhnut pouze pro komunikaci s jiným strojem skrze internet. Samotná služba s nikým neinteraguje, pouze čeká na požadavky od ostatních systémů, které jí využívají. Komunikace probíhá nejčastěji přes HTTP, ale je možné používat i jiné protokoly. Informace bývají ve formátu XML, nebo častěji v JSON, který se za poslední roky stal velmi populární, díky čitelnosti a přehlednosti schématu. Dále je potřeba mít také stanovené rozhraní přes které probíhá interakce to může být například REST nebo SOAP(Simple Object Access Protocol). Hlavní smyslem služby je poskytování svých zdrojů a funkcionalit ostatním systémům, které k ní přistupují. 
+
+\section{PDF} \label{PDF}
+	Portable Document Format (dále jen PDF), jak už název napovídá, představuje formát dokumentů, jejichž hlavním cílem je poskytování nezávislosti na platformě. Je velmi podobný programovacímu jazyku PostScript, ze kterého vzešel. Syntaxe souboru je nejlépe pochopitelná jako čtyři komponenty\cite{pdf}: 
 	\begin{itemize}
 		\item Objekty (Objects) - Základní jednotka celého souboru např. Pole, Čísla, Řetězce znaků. Jednotlivé objekty se popisují množinou znaků, která je definována lexikálními konvencemi.
 		\item Struktura souboru (File Structure) - Samotný soubor se skládá ze čtyř částí, jak je i vidět na obrázku \ref{fig:pdf}, ty si stručně popíšeme: 
@@ -29,7 +32,14 @@
 		\item Proud obsahu (Content stream) - Objekt, ve kterém se nacházejí instrukce k vykreslování grafických elementů. Každá stránka má minimálně jeden a na rozdíl od ostatních objektu je procházen sekvenčně.	
 	\end{itemize}
 
-	\newpage
+	Vzhledem k povaze této práce je potřeba také zmínit systém práv a povolení. Existují dva typy práv, která jsou rozlišeny na základě poskytnutého hesla. Buď je zadáno uživatelské heslo, které umožní uživateli jenom otevřít daný soubor. Nebo heslo vlastníka, díky kterému je možno upravovat uživatelské heslo a jeho práva k manipulaci se souborem. Jde povolit tyto možnosti:
+	\begin{itemize}
+		\item Upravování obsahu dokumentu
+		\item Kopírování textu a obrázků 
+		\item Vyplňování formulářu a polí
+		\item Tisknutí dokumentu
+	\end{itemize}
+
 	\begin{figure}[H]
 		\includegraphics[scale=0.9]{Untitled}
 		\centering
@@ -45,7 +55,7 @@
 	Základní soubory mají příponu tex kromě souboru s nastavením, ten je ve formátu cls, neboli class file. Tyto soubory mohou být uspořádány do stromové struktury, kde v kořenu stromu je jeden hlavní soubor, do kterého jsou vnořovány další. To napomáhá přehlednosti velkých dokumentů a také používání již vytvořených. 
 	
 	Soubor se skládá z preambule, která obsahuje nastavení pro celý dokument a případně používané balíčky. Ve druhé části dokumentu se mimo jiné nacházejí kapitoly, sekce a podobně. Základní syntaxe může vypadat takto.
-	\newpage
+	
 	\begin{verbatim}
 	\documentclass{thesis}
 	\usepackage{csquotes}
@@ -57,7 +67,9 @@
 	
 	Výše zmíněné balíčky slouží k přidávání dalších předvytvořených řídících konstrukcí. Tyto balíčky jsou buď nainstalovány zároveň s instalací kompilátoru, nebo je možné je ručně doinstalovávat podle potřeby. 
 	
-	Pro získání výsledného dokumentu, například ve formátu PDF, je potřeba vše zkompilovat. To provádí kompilátor.  
+	Pro získání výsledného dokumentu, například ve formátu PDF, je potřeba vše zkompilovat. To provádí kompilátor. 
+	
+	Dalším podporovaným formátem je DVI(Device Independent file format) což je binární soubor k jehož interpretaci je potřeba řadič. Je velmi podobný PDF, hlavní rozdíl je v tom, že DVI nefunguje jako uplný programovací jazyk a není tak univerzální a rozšížený napříč platformami. 
 
 \section{Moodle a CourseWare}
 	Ačkoliv tyto portály se v mnoha aspektech liší, v rámci této práce je můžeme považovat za ekvivalentní. Oba slouží pro podporu studia, a to hlavně v podobě poskytování informací o předmětech studentům, kteří je mají zapsané. Vyučující takto může předat informace o harmonogramu kurzu, přednášky a jiné materiály. Moodle je komplexnější open-source systém s možností upravovat ho k potřebě vzdělávacího zařízení, který navíc poskytuje prostředí pro vytváření a psaní testů, zapisování docházky, komunikaci se studenty a jiné.

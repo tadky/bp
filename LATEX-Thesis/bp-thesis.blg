@@ -5,7 +5,11 @@ Warning--string name "september" is undefined
 --line 23 of file ctubib.bib
 Warning--string name "august" is undefined
 --line 37 of file ctubib.bib
+Warning--string name "july" is undefined
+--line 51 of file ctubib.bib
 Warning--to sort, need author or key in pdf
+Warning--to sort, need author or key in javaee
 Warning--empty publisher in furps
+Warning--empty publisher in arch
 Warning--empty publisher in latex
-(There were 5 warnings)
+(There were 8 warnings)
