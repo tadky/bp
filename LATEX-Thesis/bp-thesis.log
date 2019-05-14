@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.31)  12 MAY 2019 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.31)  12 MAY 2019 18:37
 entering extended mode
 **./bp-thesis.tex
 (bp-thesis.tex
@@ -1524,15 +1524,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
  (bp-thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
+Package rerunfilecheck Info: File `bp-thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 1E90B46DFEB3431CF07DC6A0E5F66BE8;2059.
 
-
-Package rerunfilecheck Warning: File `bp-thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `bp-thesis.out':
-(rerunfilecheck)             Before: 99000FE9E5BA794402141D8C2D52C67C;2078
-(rerunfilecheck)             After:  1E90B46DFEB3431CF07DC6A0E5F66BE8;2059.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1563,7 +1557,7 @@ grams/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Tadky/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Tadky/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Tadky/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
-Output written on bp-thesis.pdf (37 pages, 567454 bytes).
+Output written on bp-thesis.pdf (37 pages, 567839 bytes).
 PDF statistics:
  661 PDF objects out of 1000 (max. 8388607)
  205 named destinations out of 1000 (max. 500000)

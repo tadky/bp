@@ -203,3 +203,5 @@ Je knihovna pomocí, která umožňuje mapování databáze na entity, předdefi
  </dataSource>
 </environment>
 \end{lstlisting}
+
+Samotné dotazy jsou napsány v xml souborech, ty jsou rozděleny podle tabulek, každý SELECT, INSERT atd. je označen jménem, vstupnímy a výstupnímy parametry. Jednotlivým dotazům odpovídají abstraktním metodám v rozhraní entit nebo-li interface. Ty jsou vytaženy z instance SqlSession a následně je na nich zavolána daná metoda, která vykoná daný dotaz. 
