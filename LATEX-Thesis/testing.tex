@@ -1,0 +1,33 @@
+\chapter{Testování}  
+
+
+\section{Testovací scénáře}
+Nevalidní token - 
+Nevalidní JSON -
+Špatný formát archivu -
+Nevalidní ID -  
+
+\section{REST rozhraní}
+K tomuto testování byla použita knihovna Rest Assured, která nabízí jednoduché prostředí pro vytváření HTTP požadavků a kontrolování správnosti odpovědí. Testy byly vytvořeny pro všechny zdroje, ovšem testují jenom okrajové negativní případy, při kterých nejsou zapotřebí soubory. 
+
+\begin{lstlisting}[caption=Požadavek se špatným tokenem]
+@Test
+void invalidToken(){
+ String badToken = "asdfasdf";
+ RestAssured.given().queryParam("token",badToken)
+ .contentType(ContentType.JSON).body("test")
+ .then().expect().statusCode(401).when().post(context);
+}
+\end{lstlisting} 
+
+Ty ostatní byly otestovány ručně, jednotlivé testované případy jsou vypsány níže:
+\begin{itemize}
+	\item Soubor je příliš velký
+	\item Kompletní průchod aplikací
+	\item Název archivu neodpovídá názvu hlavního texu
+	\item Achiv je prázdný
+\end{itemize}
+
+Všechny testy prošli pozitivně, tudíž se dá prohlásit, že aplikace reaguje správně na rúzné typy požadavků. 
+
+\section{} 
